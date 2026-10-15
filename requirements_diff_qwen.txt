@@ -1,0 +1,16 @@
+# Conda env: diff
+# Purpose: vLLM rollouts for most models in verifier/run_rollout.sh (not the Qwen3-Next-80B wave, which uses diff_v).
+# Pin: vLLM 0.19.x + torch 2.10/cu128. Avoid 0.20+cu130 on multi-GPU TP=4 Blackwell until NCCL init is stable (segfault in ncclNetPluginInit).
+# vLLM 0.19.0 added Qwen3_5ForConditionalGeneration to its native registry.
+#
+# Create env:
+#   conda create -n diff python=3.12 -y
+#   conda activate diff
+#   pip install -r requirements_diff_qwen.txt
+
+vllm==0.19.0
+transformers==4.57.6
+tokenizers>=0.22.0
+huggingface-hub>=0.26.0
+openai>=1.0.0
+json-repair>=0.25.0

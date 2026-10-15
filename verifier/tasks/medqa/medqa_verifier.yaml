@@ -1,0 +1,6 @@
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/medqa/medqa.yaml
+task: medqa_verifier
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: __LMMS_EVAL_REPO__/data/verifier/candidates/medqa.jsonl

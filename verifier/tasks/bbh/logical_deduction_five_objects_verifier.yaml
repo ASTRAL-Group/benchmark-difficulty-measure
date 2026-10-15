@@ -1,0 +1,17 @@
+dataset_name: "logical_deduction_five_objects"
+description: "A logical deduction task which requires deducing the order of a sequence of objects.\n\n"
+doc_to_text: "Q: {{input}}\nA: Let's think step by step."
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/bbh/cot_zeroshot/_cot_zeroshot_template_yaml
+task: "bbh_5obj_verifier"
+filter_list:
+  - name: "flexible-extract"
+    filter:
+      - function: !function utils.MultiChoiceRegexFilter
+        group_select: -1
+        ignore_case: true
+        ignore_punctuation: true
+        regex_pattern: "(\\([A-Z]\\))"
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: __REPO_ROOT__/verifier/lmms_candidates/bbh_5obj.jsonl

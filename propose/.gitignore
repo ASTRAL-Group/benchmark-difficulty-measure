@@ -1,0 +1,12 @@
+# Generated runs (keep results/ directory via .gitkeep)
+results/*
+!results/.gitkeep
+
+# Legacy output location from earlier scaffold
+propose_runs/
+
+# Python bytecode (see README: PYTHONPYCACHEPREFIX or PYTHONDONTWRITEBYTECODE)
+__pycache__/
+*.py[cod]
+*.pyo
+.python-pycache/

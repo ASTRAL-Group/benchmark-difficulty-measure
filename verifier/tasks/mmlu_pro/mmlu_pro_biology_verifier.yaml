@@ -1,0 +1,23 @@
+description: "The following are multiple choice questions (with answers) about biology. Think step by step and then finish your answer with \"the answer is (X)\" where X is the correct letter choice."
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/mmlu_pro/_default_template_yaml
+task: "mmlu_bio_verifier"
+task_alias: "biology"
+process_docs: !function utils.process_biology
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: __REPO_ROOT__/verifier/lmms_candidates/mmlu_bio.jsonl
+# Override the upstream 5-shot default — our candidate jsonl only has a test split,
+# so loading fewshot examples from a non-existent validation split would crash.
+# fewshot_config must also be null: lmms_eval initializes the fewshot sampler
+# unconditionally when fewshot_config is set, even if num_fewshot=0.
+num_fewshot: 0
+fewshot_config: null
+# Override the upstream filter_list (which ends with take_first → collapses 8 sampled
+# answers into 1 string). We need to keep all N answers so verifier.main can compute
+# n_trials=N for IRT, not n_trials=1.
+filter_list:
+  - name: "answer-extract"
+    filter:
+      - function: "regex"
+        regex_pattern: "(?i)(?:the\\s+)?(?:final\\s+)?answer\\s+is\\s*[:：]?\\s*\\(?([A-J])\\)?"

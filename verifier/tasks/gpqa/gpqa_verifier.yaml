@@ -1,0 +1,8 @@
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/gpqa/cot_n_shot/_gpqa_cot_n_shot_yaml
+task: gpqa_verifier
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    test: __LMMS_EVAL_REPO__/data/verifier/candidates/gpqa.jsonl
+test_split: test

@@ -1,0 +1,7 @@
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/scienceqa/scienceqa.yaml
+task: scienceqa_verifier
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    test: __LMMS_EVAL_REPO__/data/verifier/candidates/scienceqa.jsonl

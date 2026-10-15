@@ -1,0 +1,14 @@
+[
+  {"name": "glm-4.5-air", "base_url": "http://127.0.0.1:8011/v1", "model": "glm-4.5-air", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "glm-4.6", "base_url": "http://127.0.0.1:8012/v1", "model": "glm-4.6", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "gpt-oss-20b", "base_url": "http://127.0.0.1:8013/v1", "model": "gpt-oss-20b", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "llama-3.1-8b", "base_url": "http://127.0.0.1:8014/v1", "model": "llama-3.1-8b", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "llama-3.2-3b-instruct", "base_url": "http://127.0.0.1:8015/v1", "model": "llama-3.2-3b-instruct", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "olmo-3.1-32b-think", "base_url": "http://127.0.0.1:8016/v1", "model": "olmo-3.1-32b-think", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "phi-4", "base_url": "http://127.0.0.1:8017/v1", "model": "phi-4", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "qwen3-next-80b-a3b-instruct", "base_url": "http://127.0.0.1:8018/v1", "model": "qwen3-next-80b-a3b-instruct", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "qwen3.5-397b-a17b", "base_url": "http://127.0.0.1:8019/v1", "model": "qwen3.5-397b-a17b", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "qwq-32b", "base_url": "http://127.0.0.1:8020/v1", "model": "qwq-32b", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "smollm2-1.7b-instruct", "base_url": "http://127.0.0.1:8021/v1", "model": "smollm2-1.7b-instruct", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240},
+  {"name": "vicuna-7b-v1.5", "base_url": "http://127.0.0.1:8022/v1", "model": "vicuna-7b-v1.5", "temperature": 0.6, "top_p": 0.95, "max_tokens": 10240}
+]
