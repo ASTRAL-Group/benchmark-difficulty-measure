@@ -1,0 +1,20 @@
+# Conda env: diff_minimax
+# Purpose: vLLM serve for proposal/generation only (MiniMax-M2.7).
+# Keep separate from diff (verifier rollouts, including Qwen3.5-397B) and diff_v (Qwen3-Next-80B).
+#
+# MiniMax-M2.7 needs minimax_m2 / minimax_m2_append_think parsers (not in vLLM 0.19.x).
+#
+# Create env:
+#   bash scripts/setup_diff_minimax.sh
+# Or manually:
+#   conda create -n diff_minimax python=3.12 -y
+#   conda activate diff_minimax
+#   pip install -r requirements_diff_minimax.txt
+
+vllm>=0.22.0
+transformers>=4.57.0
+tokenizers>=0.22.0
+huggingface-hub>=0.26.0
+openai>=1.0.0
+json-repair>=0.25.0
+safetensors>=0.4.0

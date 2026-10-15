@@ -1,0 +1,15 @@
+# Conda env: diff_v — Qwen3-Next-80B wave only.
+# Use when vLLM 0.20 + cu130 hits NCCL segfault during TP=4 worker init (ncclNetPluginInit).
+#
+#   conda create -n diff_v python=3.12 -y
+#   conda run -n diff_v pip install -r requirements_diff_qwen_next.txt
+#
+vllm==0.19.0
+pebble>=5.2
+json-repair
+latex2sympy2
+word2number
+python-dateutil
+multiprocess
+timeout-decorator
+datasets

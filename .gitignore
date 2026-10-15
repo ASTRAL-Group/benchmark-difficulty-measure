@@ -1,0 +1,37 @@
+# Experiment outputs
+propose/results/
+random_baseline/results/
+random_baseline/PLAN.md
+trajectory/
+verifier/results/
+verifier/lmms_candidates/*.jsonl
+!verifier/lmms_candidates/.gitkeep
+verifier/math_candidates/*/*.jsonl
+mass_fill_results/*/steps/
+mass_fill_results/*/logs/
+
+# Logs / runtime
+*.log
+guardian.pid
+
+# Local configuration (copied from env.example)
+env.local
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+.python-pycache/
+
+# IRT NetCDF (large) and model-ability posteriors (not released)
+irt_results/*.nc
+irt_results/*_ability.csv
+
+# Legacy
+propose/propose_runs/
+data/verifier/
+
+# Bundled lmms-eval extract (tarball vendor/lmms-eval.tar.gz is tracked)
+vendor/lmms-eval/
+vendor/lmms-eval/.venv/

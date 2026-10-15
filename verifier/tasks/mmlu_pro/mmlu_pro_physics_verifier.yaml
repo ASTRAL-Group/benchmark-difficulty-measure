@@ -1,0 +1,9 @@
+description: "The following are multiple choice questions (with answers) about physics. Think step by step and then finish your answer with \"the answer is (X)\" where X is the correct letter choice."
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/mmlu_pro/_default_template_yaml
+task: "mmlu_pro_physics_verifier"
+task_alias: "physics"
+process_docs: !function utils.process_physics
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: __LMMS_EVAL_REPO__/data/verifier/candidates/mmlu_phys.jsonl

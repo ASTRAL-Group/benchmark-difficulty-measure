@@ -1,0 +1,35 @@
+include: __LMMS_EVAL_REPO__/lmms_eval/tasks/ifeval/ifeval.yaml
+task: ifeval_verifier
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    test: __REPO_ROOT__/verifier/lmms_candidates/ifeval.jsonl
+test_split: test
+# Override upstream process_results (which scores only results[0]) with our local
+# implementation that iterates every sample and returns list-valued metrics, so
+# verifier/main.py can compute n_trials=N (matching --repeats N) instead of N=1.
+process_results: !function utils.process_results
+# lmms_eval defaults filter_list to [take_first] when unset, which collapses N
+# sampled responses to one string. Use take_first_k with k matching --repeats
+# (N_SAMPLING in run_experiment.sh, currently 4) to keep all samples as a list.
+filter_list:
+  - name: "all-samples"
+    filter:
+      - function: "take_first_k"
+        k: 4
+# Override the upstream metric_list so aggregation tolerates per-doc list-valued
+# metrics (one entry per sample) instead of crashing on ``sum(list_of_lists)``.
+metric_list:
+  - metric: prompt_level_strict_acc
+    aggregation: !function utils.agg_prompt_level_acc_multi
+    higher_is_better: true
+  - metric: inst_level_strict_acc
+    aggregation: !function utils.agg_inst_level_acc_multi
+    higher_is_better: true
+  - metric: prompt_level_loose_acc
+    aggregation: !function utils.agg_prompt_level_acc_multi
+    higher_is_better: true
+  - metric: inst_level_loose_acc
+    aggregation: !function utils.agg_inst_level_acc_multi
+    higher_is_better: true

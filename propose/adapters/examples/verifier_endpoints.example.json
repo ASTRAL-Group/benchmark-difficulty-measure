@@ -1,0 +1,10 @@
+[
+  {
+    "name": "glm-4.5-air",
+    "base_url": "http://127.0.0.1:8001/v1",
+    "model": "glm-4.5-air",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "max_tokens": 32768
+  }
+]
