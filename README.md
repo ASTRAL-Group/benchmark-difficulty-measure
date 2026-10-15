@@ -27,7 +27,7 @@ This repository is the official implementation and artifact release of our NeurI
 | Component | Contents | Location |
 |---|---|---|
 | **1. [Experimental Code](#1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
-| **2. [Difficulty Artifact](#2-difficulty-artifact-25-benchmarks)** (25 benchmarks) | Per-item difficulties normalized to [0, 1], with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
+| **2. [Difficulty Artifact](#2-difficulty-artifact-25-benchmarks)** (25 benchmarks) | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
 | **3. [BenchFill Artifact](#3-benchfill-artifact-4-benchmarks)** (4 benchmarks) | BenchFill-generated items for AIME24, AIME25, AIME26 and AMC23 | In preparation |
 
 ## 1. Experimental Code
@@ -79,17 +79,18 @@ The Bayesian IRT fitting of the original benchmarks (PyMC/NUTS) is not included.
 
 [`data/benchmarks/<benchmark>/`](data/benchmarks/) holds one directory per benchmark in Table 1 of the paper:
 
-- **`difficulty.csv`** — `item_id,normalized_difficulty`. The value is the 1PL IRT difficulty, min–max normalized to [0, 1] within the benchmark.
+- **`difficulty.csv`** — `item_id,b_mean`. `b_mean` is the original unnormalized IRT item difficulty, copied directly from the selected source estimates without refitting or rounding.
 - **`test.jsonl`** — the evaluated items with their original fields, or only `item_id` and `source_item_id` where questions are not redistributed.
 
-Both files use the same integer `item_id`, numbered `0` to `N−1`; join on it. Original identifiers are kept as provenance in the field listed below.
+Both files use the same integer `item_id`, numbered `0` to `N−1`; join on it. Original identifiers are kept as provenance in the field listed below. Paper diagnostics use per-benchmark min–max normalization, `z = (b_mean - min(b_mean)) / (max(b_mean) - min(b_mean))`, as shown below.
 
 ```python
 import csv
 import numpy as np
 
-z = np.sort([float(r["normalized_difficulty"])
-             for r in csv.DictReader(open("data/benchmarks/AIME24/difficulty.csv"))])
+b = np.array([float(r["b_mean"])
+              for r in csv.DictReader(open("data/benchmarks/AIME24/difficulty.csv"))])
+z = np.sort((b - b.min()) / (b.max() - b.min()))
 n = len(z)
 ddm = np.abs(z - (np.arange(1, n + 1) - 0.5) / n).mean()
 gaps = np.diff(np.concatenate([[0.0], z, [1.0]]))
