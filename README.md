@@ -36,7 +36,6 @@ This repository is the official implementation and artifact release of our NeurI
 |---|---|
 | [`propose/`](propose/) | BenchFill generation: rewriter, gap and parent selection, search driver |
 | [`verifier/`](verifier/) | Difficulty annotation: 12-model rollouts and IRT scoring of new items against fixed model abilities |
-| [`random_baseline/scripts/`](random_baseline/scripts/) | Budget-matched uniform-parent baseline |
 | [`scripts/check_paper_metrics.py`](scripts/check_paper_metrics.py) | DDM, Max Gap and Top-k gap sums; Top-3 gap-sum reduction and target deviation for inserted items |
 | [`run_experiment.sh`](run_experiment.sh) | Entry point for a BenchFill run |
 | [`irt_results/`](irt_results/), [`data/pools/`](data/pools/), [`data/matrix/`](data/matrix/) | Runtime inputs for the eight BenchFill benchmarks: IRT difficulties (`b_mean`, `b_sd`), item pools, and 12-model response matrices |
