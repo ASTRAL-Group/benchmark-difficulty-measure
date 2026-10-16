@@ -1,4 +1,4 @@
-# [NeurIPS 2026]Your Benchmark Is an Empirical Measure Over Difficulty
+# [NeurIPS 2026] Your Benchmark Is an Empirical Measure Over Difficulty
 
 <p align="center">
   <b>Yifan Sun</b><sup>1,*</sup> &nbsp;
