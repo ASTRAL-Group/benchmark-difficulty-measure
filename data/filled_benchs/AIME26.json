@@ -1,235 +1,267 @@
 [
   {
+    "id": "AIME26-origin-000",
+    "question": "Patrick started walking at a constant rate along a straight road from school to the park. One hour after Patrick left, Tanya started running along the same road from school to the park. One hour after Tanya left, Jose started bicycling along the same road from school to the park. Tanya ran at a constant rate of $2$ miles per hour faster than Patrick walked, Jose bicycled at a constant rate of $7$ miles per hour faster than Tanya ran, and all three arrived at the park at the same time. The distance from the school to the park is $\\frac{m}{n}$ miles, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+    "answer": "277"
+  },
+  {
+    "id": "AIME26-origin-001",
+    "question": "Find the number of positive integer palindromes written in base $10$ with no zero digits, and whose digits add up to $13$. For example, $42124$ has these properties. Recall that a palindrome is a number whose representation reads the same from left to right as from right to left.",
+    "answer": "62"
+  },
+  {
+    "id": "AIME26-origin-002",
+    "question": "A hemisphere with radius $200$ sits on top of a horizontal circular disk with radius $200,$ and the hemisphere and disk have the same center. Let $\\mathcal T$ be the region of points P in the disk such that a sphere of radius $42$ can be placed on top of the disk at $P$ and lie completely inside the hemisphere. The area of $\\mathcal T$ divided by the area of the disk is $\\tfrac pq,$ where $p$ and $q$ are relatively prime positive integers. Find $p+q.$",
+    "answer": "79"
+  },
+  {
+    "id": "AIME26-origin-003",
+    "question": "Find the number of integers less than or equal to 100 that are equal to $a+b+ab$ for some choice of distinct positive integers a and b.",
+    "answer": "70"
+  },
+  {
+    "id": "AIME26-origin-004",
+    "question": "A plane contains points $A$ and $B$ with $AB = 1$. Point $A$ is rotated in the plane counterclockwise through an acute angle $\\theta$ around point $B$ to point $A^\\prime$. Then $B$ is rotated in the plane clockwise through angle $\\theta$ around point $A^\\prime$ to point $B^\\prime$. Suppose that $AB^\\prime = \\frac{4}{3}$. The value of $\\cos \\theta$ can be written as $\\frac{m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+    "answer": "65"
+  },
+  {
+    "id": "AIME26-origin-005",
+    "question": "A real number $x$ satisfies $\\sqrt[20]{x^{\\log_{2026}x}}=26x$. What is the number of positive divisors of the product of all possible positive values of $x$?",
+    "answer": "441"
+  },
+  {
+    "id": "AIME26-origin-006",
+    "question": "\nFind the number of functions $\\pi$ mapping the set $A =\\{1,2,3,4,5,6\\}$ onto $A$ such that for every $a \\in A,$\n\\[\n\\pi(\\pi(\\pi(\\pi(\\pi(\\pi(a)))))) = a.\n\\]",
+    "answer": "396"
+  },
+  {
+    "id": "AIME26-origin-007",
+    "question": "Let $N$ be the number of positive integer divisors of $17017^{17}$ that leave a remainder of $5$ when divided by $12$. Find the remainder when $N$ is divided by $1000$.",
+    "answer": "244"
+  },
+  {
+    "id": "AIME26-origin-008",
+    "question": "Joanne has a blank fair six-sided die and six stickers each displaying a different integer from 1 to 6. Joanne rolls the die and then places the sticker labeled 1 on the top face of the die. She then rolls the die again, places the sticker labeled 2 on the top face, and continues this process to place the rest of the stickers in order. If the die ever lands with a sticker already on its top face, the new sticker is placed to cover the old sticker. Let $p$ be the conditional probability that at the end of the process exactly one face has been left blank, given that all the even-numbered stickers are visible on faces of the die. Then $p$ can be written as $\\tfrac mn,$ where $m$ and $n$ are relatively prime positive integers. Find $m + n.$",
+    "answer": "29"
+  },
+  {
+    "id": "AIME26-origin-009",
+    "question": "Let $\\triangle ABC$ have side lengths $AB = 13, BC = 14,$ and $CA = 15.$ Triangle $\\triangle A'B'C'$ is obtained by rotating $\\triangle ABC$ about its circumcenter so that ${}\\overline{AC}$ is perpendicular $\\overline{BC},$ with $A'$ and $B$ not on the same side of line $B'C'.$ Find the integer closest to the area of hexagon $AA'CC'BB'.$",
+    "answer": "156"
+  },
+  {
+    "id": "AIME26-origin-010",
+    "question": "The integers from $1$ to $64$ are placed in some order into an $8 \\times 8$ grid of cells with one number in each cell. Let $a_{i,j}$ be the number placed in the cell in row $i$ and column $j,$ and let $M$ be the sum of the absolute differences between adjacent cells. That is,\n\\[\nM = \\sum^8_{i=1} \\sum^7_{j=1} (|a_{i,j+1} - a_{i,j}| + |a_{j+1,i} - a_{j,i}|).\n\\]\nFind the remainder when the maximum possible value of $M$ is divided by $1000.$",
+    "answer": "896"
+  },
+  {
+    "id": "AIME26-origin-011",
+    "question": "Triangle $\\triangle ABC$ lies in plane $\\mathcal P$ with $AB = 6, AC = 4,$ and $\\angle BAC = 90^\\circ.$ Let $D$ be the reflection across $\\overline{BC}$ of the centroid of $\\triangle ABC. {}$ Four spheres, all on the same side of $\\mathcal P,$ have radii $1, 2, 3,$ and $r$ and are tangent to $\\mathcal P$ at points $A, B, C,$ and $D,$ respectively. The four spheres are also each tangent to a second plane $\\mathcal T$ and are all on the same side of $\\mathcal T.$ The value of $r$ can be written as $\\tfrac mn,$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$",
+    "answer": "161"
+  },
+  {
+    "id": "AIME26-origin-012",
+    "question": "For each positive integer $r$ less than $502,$ define\n\\[\nS_r=\\sum_{m\\ge 0}\\dbinom{10000}{502n+r},\n\\]\nwhere $\\binom{10000}{n}$ is defined to be $0$ when $n>10000.$ That is, $S_r$ is the sum of all binomial coefficients of the form $\\binom{10000}{k}$ for which $0\\le k\\le 10000$ and $k-r$ is a multiple of $502.$ Find the number of integers in the list $S_0,S_1,\\dots,S_{501}$ that are multiples of the prime number $503.$",
+    "answer": "39"
+  },
+  {
+    "id": "AIME26-origin-013",
+    "question": "In an equiangular pentagon, the sum of the squares of the side lengths equals $308,$ and the sum of the squares of the diagonal lengths equals $800.$ The square of the perimeter of the pentagon can be expressed as $m \\sqrt n,$ where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime. Find $m + n.$",
+    "answer": "681"
+  },
+  {
+    "id": "AIME26-origin-014",
+    "question": "Let $a, b,$ and $n$ be positive integers with both $a$ and $b$ greater than or equal to $2$ and less than or equal to $2n$. Define an $a \\times b$ cell loop in a $2n \\times 2n$ grid of cells to be the $2a + 2b - 4$ cells that surround an $(a - 2) \\times (b - 2)$ (possibly empty) rectangle of cells in the grid. For example, the following diagram shows a way to partition a $6 \\times 6$ grid of cells into $4$ cell loops.\n\n| P   P P   P | Y   Y |\n| P | R R | P | Y | Y |\n| P | R R | P | Y | Y |\n| P   P P   P | Y | Y |\n| G   G G   G | Y | Y |\n| G   G G   G | Y   Y |\n\nFind the number of ways to partition a $10 \\times 10$ grid of cells into $5$ cell loops so that every cell of the grid belongs to exactly one cell loop.",
+    "answer": "83"
+  },
+  {
+    "id": "AIME26-origin-015",
+    "question": "Find the sum of the $10$th terms of all arithmetic sequences of integers that have first term equal to $4$ and include both $24$ and $34$ as terms.",
+    "answer": "178"
+  },
+  {
+    "id": "AIME26-origin-016",
+    "question": "The figure below shows a grid of $10$ squares in a row. Each square has a diagonal connecting its lower left vertex to its upper right vertex. A bug moves along the line segments from vertex to vertex, never traversing the same segment twice and never moving from right to left along a horizontal or diagonal segment. Let $N$ be the number of paths the bug can take from the lower left corner ($A$) to the upper right corner ($B$). One such path from $A$ to $B$ is shown by the thick line segments in the figure. Find $\\sqrt{N}$.\n\n[asy]\nsize(12cm);\ndraw((0, 0)--(0, 1));\nfor (int i = 0; i <= 9; i += 1)\n{\ndraw((i, 1)--(i + 1, 1)--(i + 1, 0)--(i, 0)--(i + 1, 1));\n}\ndraw((0, 0)--(0, 1)--(2, 1)--(2, 0)--(3, 1)--(3, 0)--(4, 1)--(4, 0)--(5, 0)--(5, 1)--(6, 1)--(6, 0)--(7, 1)--(8, 1)--(8, 0)--(10, 0)--(10, 1), red + linewidth(2));\nlabel(\"$A$\", (0, 0), dir(180));\nlabel(\"$B$\", (10, 1), dir(0));\n[/asy]",
+    "answer": "243"
+  },
+  {
+    "id": "AIME26-origin-017",
+    "question": "Let $ABCDE$ be a nonconvex pentagon with internal angles $\\angle A = \\angle E = 90^\\circ$ and $\\angle B = \\angle D = 45^\\circ.$ Suppose that $DE < AB, AE = 20, BC = 14\\sqrt2,$ and points $B,C,$ and $D$ lie on the same side of line $AE.$ Suppose further that $AB$ is an integer with $AB < 2026$ and the area of pentagon $ABCDE$ is an integer multiple of $16.$ Find the number of possible values of $AB.$",
+    "answer": "503"
+  },
+  {
+    "id": "AIME26-origin-018",
+    "question": "For each positive integer $n$ let $f(n)$ be the value of the base-ten numeral $n$ viewed in base $b$, where $b$ is the least integer greater than the greatest digit in $n$. For example, if $n=72$, then $b=8$, and $72$ as a numeral in base $8$ equals $7\\cdot 8+2=58$; therefore $f(72)=58$. Find the number of positive integers $n$ less than $1000$ such that $f(n)=n$.",
+    "answer": "279"
+  },
+  {
+    "id": "AIME26-origin-019",
+    "question": "An urn contains $n$ marbles. Each marble is either red or blue, and there are at least $7$ marbles of each color. When $7$ marbles are drawn randomly from the urn without replacement, the probability that exactly $4$ of them are red equals the probability that exactly $5$ of them are red. Find the sum of the five least values of $n$ for which this is possible.",
+    "answer": "190"
+  },
+  {
+    "id": "AIME26-origin-020",
+    "question": "Find the sum of all real numbers $r$ such that there is at least one point where the circle with radius $r$ centered at $(4, 39)$ is tangent to the parabola with equation $2y = x^2 - 8x + 12.$",
+    "answer": "50"
+  },
+  {
+    "id": "AIME26-origin-021",
+    "question": "A standard fair six-sided die is rolled repeatedly. Each time the die reads 1 or 2, Alice gets a coin; each time it reads 3 or 4, Bob gets a coin; and each time it reads 5 or 6, Carol gets a coin. The probability that Alice and Bob each receive at least two coins before Carol receives any coins can be written as $\\tfrac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $100m+n.$",
+    "answer": "754"
+  },
+  {
+    "id": "AIME26-origin-022",
+    "question": "Isosceles triangle $\\triangle ABC$ has $AB = BC.$ Let $I$ be the incenter of $\\triangle ABC.$ The perimeters of $\\triangle ABC$ and $\\triangle AIC$ are in the ratio $125:6,$ and all the sides of both triangles have integer lengths. Find the minimum possible value of $AB.$",
+    "answer": "245"
+  },
+  {
+    "id": "AIME26-origin-023",
+    "question": "Let $S$ denote the value of the infinite sum\n\\[\n\\frac{1}{9} + \\frac{1}{99} + \\frac{1}{999} + \\frac{1}{9999}  + \\cdots\n\\]\nFind the remainder when the greatest integer less than or equal to $10^{100} S$ is divided by $1000.$",
+    "answer": "669"
+  },
+  {
+    "id": "AIME26-origin-024",
+    "question": "Let $\\triangle ABC$ be a triangle with $D$ on $\\overline{BC}$ such that $\\overline{AD}$ bisects $\\angle BAC.$ Let $\\omega$ be the circle that passes through $A$ and is tangent to segment $\\overline{BC}$ at $D.$ Let $E \\neq A$ and $F \\neq A$ be the intersections of $\\omega$ with segments $\\overline{AB}$ and $\\overline{AC},$ respectively. Suppose that $AB = 200, AC = 225,$ and all of $AE, AF, BD,$ and $CD$ are positive integers. Find the sum of all possible values of $BC.$",
+    "answer": "850"
+  },
+  {
+    "id": "AIME26-origin-025",
+    "question": "Find the greatest integer $n$ such that the cubic polynomial\n\\[\nx^{3} - \\displaystyle\\frac{n}{6}x^{2} + (n - 11)x - 400\n\\]\nhas roots $\\alpha^{2}$, $\\beta^{2}$, and $\\gamma^{2}$, where $\\alpha$, $\\beta$, and $\\gamma$ are complex numbers, and there are exactly seven different possible values for $\\alpha + \\beta + \\gamma$.",
+    "answer": "132"
+  },
+  {
+    "id": "AIME26-origin-026",
+    "question": "Consider a tetrahedron with two isosceles triangle faces with side lengths $5\\sqrt{10}, 5\\sqrt{10},$ and $10$ and two isosceles triangle faces with side lengths $5\\sqrt{10}, 5\\sqrt{10},$ and $18.$ The four vertices of the tetrahedron lie on a sphere with center $S,$ and the four faces of the tetrahedron are tangent to a sphere with center $R.$ The distance $RS$ can be written as $\\tfrac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m + n.$",
+    "answer": "223"
+  },
+  {
+    "id": "AIME26-origin-027",
+    "question": "Call finite sets of integers $S$ and $T$ cousins if\n- $S$ and $T$ have the same number of elements,\n- $S$ and $T$ are disjoint, and\n- the elements of $S$ can be paired with the elements of $T$ so that the elements in each pair differ by exactly $1$.\nFor example, $\\{1,2,5\\}$ and $\\{0,3,4\\}$ are cousins. Suppose that the set $S$ has exactly $4040$ cousins. Find the least number of elements the set $S$ can have.",
+    "answer": "107"
+  },
+  {
+    "id": "AIME26-origin-028",
+    "question": "For integers $a$ and $b,$ let $a \\circ b = a - b$ if $a$ is odd and $b$ is even, and $a+b$ otherwise. Find the number of sequences $a_1, a_2, a_3, \\ldots, a_n$ of positive integers such that\n\\[\na_1 + a_2 + a_3 + \\cdots + a_n = 12 \\quad \\text{and} \\quad a_1 \\circ a_2 \\circ a_3 \\circ \\cdots \\circ a_n = 0\n\\]\nwhere the operations are performed from left to right; that is, $a_1 \\circ a_2 \\circ a_3$ means $(a_1 \\circ a_2) \\circ a_3.$",
+    "answer": "157"
+  },
+  {
+    "id": "AIME26-origin-029",
+    "question": "Find the number of ordered 7-tuples $(a_1, a_2, a_3, \\ldots, a_7)$ having the following properties:\n- $a_k \\in \\{1,2,3\\}$ for all $k.$\n- $a_1+a_2+a_3+a_4+a_5+a_6+a_7$ is a multiple of $3.$\n- $a_1a_2 a_4 + a_2a_3a_5 + a_3a_4 a_6 + a_4 a_5 a_7 + a_5 a_6 a_1 + a_6 a_7 a_2 + a_7 a_1 a_3$ is a multiple of $3.$",
+    "answer": "393"
+  },
+  {
     "id": "AIME26-fill-001",
-    "benchmark": "AIME26",
     "question": "For integers $a$ and $b$, define $a\\diamond b$ to be $a-b$ when $a$ is odd and $b$ is even, and $a+b$ otherwise. Find the number of ordered sequences $a_1, a_2, \\dots, a_k$ of positive integers such that $a_1 + a_2 + \\cdots + a_k = 12$ and $a_1 \\diamond a_2 \\diamond \\cdots \\diamond a_k = 0$, where the operations are performed from left to right.",
-    "answer": "157",
-    "target_difficulty": 0.94,
-    "estimated_difficulty": 0.9408,
-    "source_id": "gen_r1_gen_r0_28_c3_c2",
-    "parent_source_id": "q28",
-    "run_id": "split_20260613_015116"
+    "answer": "157"
   },
   {
     "id": "AIME26-fill-002",
-    "benchmark": "AIME26",
     "question": "Find the sum of the 9th terms of all integer arithmetic sequences that have first term 15 and include the numbers 75, 105, and 135 as terms.",
-    "answer": "696",
-    "target_difficulty": 0.1264,
-    "estimated_difficulty": 0.1277,
-    "source_id": "gen_r0_15_c0",
-    "parent_source_id": "q15",
-    "run_id": "split_20260616_015702"
+    "answer": "696"
   },
   {
     "id": "AIME26-fill-003",
-    "benchmark": "AIME26",
     "question": "Let triangle ABC have side lengths AB = 7, BC = 9, and CA = 12. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter until side A'C' is perpendicular to BC, with A' and B on opposite sides of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
-    "answer": "74",
-    "target_difficulty": 0.8277,
-    "estimated_difficulty": 0.8248,
-    "source_id": "gen_r1_gen_r0_9_c0_c0",
-    "parent_source_id": "q9",
-    "run_id": "split_20260616_222422"
+    "answer": "74"
   },
   {
     "id": "AIME26-fill-004",
-    "benchmark": "AIME26",
     "question": "For each positive integer n, let d be the greatest digit in the decimal representation of n and set b = d+1. Interpret the decimal string of n as a numeral in base b; the resulting integer is f(n). For instance, for n=35 we have d=5, b=6, and 35 interpreted in base 6 equals 3*6+5=23, so f(35)=23. Find the number of positive integers n less than 100 such that f(n)=n.",
-    "answer": "27",
-    "target_difficulty": 0.2676188214567127,
-    "estimated_difficulty": 0.2636875868821562,
-    "source_id": "gen_r0_18_c0",
-    "parent_source_id": "18"
+    "answer": "27"
   },
   {
     "id": "AIME26-fill-005",
-    "benchmark": "AIME26",
     "question": "Let p be the smallest prime greater than 400. For each integer r with 0 ≤ r ≤ p-2 define S_r = sum_{k ≡ r (mod p-1)} binom{420}{k}, where binom{420}{k}=0 for k>420. How many of the numbers S_0, S_1, …, S_{p-2} are divisible by p?",
-    "answer": "379",
-    "target_difficulty": 0.5389702161099304,
-    "estimated_difficulty": 0.5442187222770324,
-    "source_id": "gen_r2_gen_r1_gen_r0_12_c1_c2_c3",
-    "parent_source_id": "gen_r1_gen_r0_12_c1_c2"
+    "answer": "379"
   },
   {
     "id": "AIME26-fill-006",
-    "benchmark": "AIME26",
     "question": "Let triangle ABC have side lengths AB = 6, BC = 5, and CA = 5. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter so that AC is perpendicular to BC, with A' and B not on the same side of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
-    "answer": "18",
-    "target_difficulty": 0.7409655963541633,
-    "estimated_difficulty": 0.7440036188899339,
-    "source_id": "gen_r0_9_c0",
-    "parent_source_id": "9"
+    "answer": "18"
   },
   {
     "id": "AIME26-fill-007",
-    "benchmark": "AIME26",
     "question": "Let $N$ be the number of positive integer divisors of $6^5$ that leave a remainder of $2$ when divided by $5$. Find $N$.",
-    "answer": "9",
-    "target_difficulty": 0.09739608064015216,
-    "estimated_difficulty": 0.09337679748844369,
-    "source_id": "gen_r2_gen_r0_7_c2_c0",
-    "parent_source_id": "gen_r0_7_c2"
+    "answer": "9"
   },
   {
     "id": "AIME26-fill-008",
-    "benchmark": "AIME26",
     "question": "Consider a 6×6 grid of cells. For integers a and b with 2 ≤ a, b ≤ 6, an a × b cell loop is defined as the set of cells that form the perimeter of an a × b rectangle (the loop consists of 2a+2b−4 cells surrounding an (a−2)×(b−2) interior, which may be empty). Find the number of ways to partition the entire 6×6 grid into exactly three cell loops such that every cell of the grid belongs to exactly one loop.",
-    "answer": "9",
-    "target_difficulty": 0.9107234574297458,
-    "estimated_difficulty": 0.9096953051727839,
-    "source_id": "gen_r1_gen_r0_14_c3_c3",
-    "parent_source_id": "gen_r0_14_c3"
+    "answer": "9"
   },
   {
     "id": "AIME26-fill-009",
-    "benchmark": "AIME26",
     "question": "For integers a and b, define a ★ b = a - b if a is odd, and a ★ b = a + b if a is even. Find the number of ordered sequences (a1, a2, …, an) of positive integers such that a1 + a2 + … + an = 13 and a1 ★ a2 ★ … ★ an = 1, where the binary operation is evaluated left to right.",
-    "answer": "555",
-    "target_difficulty": 0.9704,
-    "estimated_difficulty": 0.9722669763445937,
-    "source_id": "gen_r4_gen_r2_gen_r0_28_c1_c2_c2",
-    "parent_source_id": "gen_r2_gen_r0_28_c1_c2"
+    "answer": "555"
   },
   {
     "id": "AIME26-fill-010",
-    "benchmark": "AIME26",
     "question": "Find the sum of the 7th terms of all arithmetic sequences of integers that have first term equal to 12 and contain both 18 and 26 as terms.",
-    "answer": "42",
-    "target_difficulty": 0.1566856135334144,
-    "estimated_difficulty": 0.16147015745339912,
-    "source_id": "gen_r1_gen_r0_15_c3_c3",
-    "parent_source_id": "gen_r0_15_c3"
+    "answer": "42"
   },
   {
     "id": "AIME26-fill-011",
-    "benchmark": "AIME26",
     "question": "Consider ordered 6‑tuples (a_1, a_2, a_3, a_4, a_5, a_6) where each a_k is taken from the set {1, 2, 3}. How many such 6‑tuples satisfy that the sum a_1 + a_2 + a_3 + a_4 + a_5 + a_6 is divisible by 3, and the cyclic sum a_1 a_2 + a_2 a_3 + a_3 a_4 + a_4 a_5 + a_5 a_6 + a_6 a_1 leaves a remainder of 2 when divided by 3?",
-    "answer": "72",
-    "target_difficulty": 0.852723457429746,
-    "estimated_difficulty": 0.8567430825040232,
-    "source_id": "gen_r3_gen_r2_gen_r0_29_c2_c2_c0",
-    "parent_source_id": "gen_r2_gen_r0_29_c2_c2"
+    "answer": "72"
+  },
+  {
+    "id": "AIME26-fill-012",
+    "question": "For integers $a$ and $b$, define $a\\circ b = a - b$ if $a$ is odd and $b$ is even, and $a + b$ otherwise. Find the number of sequences $a_1, a_2, a_3, a_4$ of positive integers such that $a_1 + a_2 + a_3 + a_4 = 12$ and $a_1 \\circ a_2 \\circ a_3 \\circ a_4 = 0$.",
+    "answer": "12"
   },
   {
     "id": "AIME26-fill-013",
-    "benchmark": "AIME26",
-    "question": "For integers $a$ and $b$, define $a\\circ b = a - b$ if $a$ is odd and $b$ is even, and $a + b$ otherwise. Find the number of sequences $a_1, a_2, a_3, a_4$ of positive integers such that $a_1 + a_2 + a_3 + a_4 = 12$ and $a_1 \\circ a_2 \\circ a_3 \\circ a_4 = 0$.",
-    "answer": "12",
-    "target_difficulty": 0.6813024843710226,
-    "estimated_difficulty": 0.6845134468923083,
-    "source_id": "gen_r1_gen_r0_28_c2_c3",
-    "parent_source_id": "gen_r0_28_c2"
+    "question": "How many positive integer palindromes in base 10 have no digit 0, an even number of digits, consist only of odd digits, and whose digits sum to 14?",
+    "answer": "13"
   },
   {
     "id": "AIME26-fill-014",
-    "benchmark": "AIME26",
-    "question": "How many positive integer palindromes in base 10 have no digit 0, an even number of digits, consist only of odd digits, and whose digits sum to 14?",
-    "answer": "13",
-    "target_difficulty": 0.2894327776869095,
-    "estimated_difficulty": 0.28825269210144,
-    "source_id": "gen_r1_gen_r0_1_c2_c0",
-    "parent_source_id": "gen_r0_1_c2"
+    "question": "Let triangle ABC have side lengths AB = 9, BC = 7, and CA = 8. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter until segment A'C' is perpendicular to BC, with A' and B on opposite sides of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
+    "answer": "40"
   },
   {
     "id": "AIME26-fill-015",
-    "benchmark": "AIME26",
-    "question": "Let triangle ABC have side lengths AB = 9, BC = 7, and CA = 8. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter until segment A'C' is perpendicular to BC, with A' and B on opposite sides of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
-    "answer": "40",
-    "target_difficulty": 0.7997312605598234,
-    "estimated_difficulty": 0.8010245626490484,
-    "source_id": "gen_r3_gen_r1_gen_r0_9_c2_c1_c0",
-    "parent_source_id": "gen_r1_gen_r0_9_c2_c1"
+    "question": "Consider all positive integer palindromes in base 10 that use only the digits 1 through 9 (no zero allowed). How many of these numbers have a digit sum equal to 6?",
+    "answer": "8"
   },
   {
     "id": "AIME26-fill-016",
-    "benchmark": "AIME26",
-    "question": "Consider all positive integer palindromes in base 10 that use only the digits 1 through 9 (no zero allowed). How many of these numbers have a digit sum equal to 6?",
-    "answer": "8",
-    "target_difficulty": 0.24187363065195946,
-    "estimated_difficulty": 0.24266523586422215,
-    "source_id": "gen_r2_gen_r1_gen_r0_1_c1_c2_c1",
-    "parent_source_id": "gen_r1_gen_r0_1_c1_c2"
+    "question": "Joanne has a blank fair four‑sided die (a tetrahedron) and four stickers each bearing a different integer from 1 to 4. She rolls the die and places the sticker labeled 1 on the face that lands on top. She then rolls the die again, places the sticker labeled 2 on the top face, and continues this process to place the remaining stickers in order. If a roll lands on a face that already has a sticker, the new sticker covers the old one. Let p be the conditional probability that at the end exactly one face of the die is left blank, given that the stickers labeled 1 and 2 are visible on faces of the die. Then p can be written as m/n, where m and n are relatively prime positive integers. Find m + n.",
+    "answer": "3"
   },
   {
     "id": "AIME26-fill-017",
-    "benchmark": "AIME26",
-    "question": "Joanne has a blank fair four‑sided die (a tetrahedron) and four stickers each bearing a different integer from 1 to 4. She rolls the die and places the sticker labeled 1 on the face that lands on top. She then rolls the die again, places the sticker labeled 2 on the top face, and continues this process to place the remaining stickers in order. If a roll lands on a face that already has a sticker, the new sticker covers the old one. Let p be the conditional probability that at the end exactly one face of the die is left blank, given that the stickers labeled 1 and 2 are visible on faces of the die. Then p can be written as m/n, where m and n are relatively prime positive integers. Find m + n.",
-    "answer": "3",
-    "target_difficulty": 0.5246492258517629,
-    "estimated_difficulty": 0.5257921256132766,
-    "source_id": "gen_r1_gen_r0_8_c1_c2",
-    "parent_source_id": "gen_r0_8_c1"
+    "question": "A fair six‑sided die is rolled repeatedly. Each time the die shows 1, 2, or 3, Alice receives a token; each time it shows 4, Bob receives a token; and each time it shows 5 or 6, Carol receives a token. The game stops the first time either Carol receives a token or both Alice and Bob have received at least one token. What is the probability that the game stops because both Alice and Bob have received at least one token before Carol receives any? Express the probability as a reduced fraction m/n, where m and n are relatively prime positive integers, and compute 100m + n.",
+    "answer": "415"
   },
   {
     "id": "AIME26-fill-018",
-    "benchmark": "AIME26",
-    "question": "A fair six‑sided die is rolled repeatedly. Each time the die shows 1, 2, or 3, Alice receives a token; each time it shows 4, Bob receives a token; and each time it shows 5 or 6, Carol receives a token. The game stops the first time either Carol receives a token or both Alice and Bob have received at least one token. What is the probability that the game stops because both Alice and Bob have received at least one token before Carol receives any? Express the probability as a reduced fraction m/n, where m and n are relatively prime positive integers, and compute 100m + n.",
-    "answer": "415",
-    "target_difficulty": 0.35683525682076636,
-    "estimated_difficulty": 0.35590556223744265,
-    "source_id": "gen_r1_gen_r0_21_c2_c3",
-    "parent_source_id": "gen_r0_21_c2"
+    "question": "Define an operation ⊙ on integers a and b by a ⊙ b = a - b if a is odd and b is even, and a ⊙ b = a + b otherwise. Find the number of ordered 5‑tuples (a_1,a_2,a_3,a_4,a_5) of positive integers such that a_1 + a_2 + a_3 + a_4 + a_5 = 12 and a_1 ⊙ a_2 ⊙ a_3 ⊙ a_4 ⊙ a_5 = 12, where the operations are performed from left to right.",
+    "answer": "170"
   },
   {
     "id": "AIME26-fill-019",
-    "benchmark": "AIME26",
-    "question": "Define an operation ⊙ on integers a and b by a ⊙ b = a - b if a is odd and b is even, and a ⊙ b = a + b otherwise. Find the number of ordered 5‑tuples (a_1,a_2,a_3,a_4,a_5) of positive integers such that a_1 + a_2 + a_3 + a_4 + a_5 = 12 and a_1 ⊙ a_2 ⊙ a_3 ⊙ a_4 ⊙ a_5 = 12, where the operations are performed from left to right.",
-    "answer": "170",
-    "target_difficulty": 0.7256361452393068,
-    "estimated_difficulty": 0.7261686331595369,
-    "source_id": "gen_r2_gen_r0_28_c3_c2",
-    "parent_source_id": "gen_r0_28_c3"
+    "question": "A hiker leaves a campsite at a constant speed. Two hours later, a runner departs from the same campsite, running at a speed that is 2 miles per hour faster than the hiker. One hour after that, a cyclist leaves the campsite, riding at a speed that is 5 miles per hour faster than the hiker. All three arrive at the same mountain peak at the same time. The distance from the campsite to the peak is m/n miles, where m and n are relatively prime positive integers. Find m + n.",
+    "answer": "49"
   },
   {
     "id": "AIME26-fill-020",
-    "benchmark": "AIME26",
-    "question": "A hiker leaves a campsite at a constant speed. Two hours later, a runner departs from the same campsite, running at a speed that is 2 miles per hour faster than the hiker. One hour after that, a cyclist leaves the campsite, riding at a speed that is 5 miles per hour faster than the hiker. All three arrive at the same mountain peak at the same time. The distance from the campsite to the peak is m/n miles, where m and n are relatively prime positive integers. Find m + n.",
-    "answer": "49",
-    "target_difficulty": 0.017684136960147978,
-    "estimated_difficulty": 0.018548199236152718,
-    "source_id": "gen_r1_gen_r0_0_c0_c1",
-    "parent_source_id": "gen_r0_0_c0"
+    "question": "Find the sum of the 20th terms of all arithmetic sequences of integers that have first term equal to 5 and include both 29 and 41 as terms.",
+    "answer": "562"
   },
   {
     "id": "AIME26-fill-021",
-    "benchmark": "AIME26",
-    "question": "Find the sum of the 20th terms of all arithmetic sequences of integers that have first term equal to 5 and include both 29 and 41 as terms.",
-    "answer": "562",
-    "target_difficulty": 0.11053839874422184,
-    "estimated_difficulty": 0.11304765676815418,
-    "source_id": "gen_r0_15_c2",
-    "parent_source_id": "15"
+    "question": "In the plane, the segment AB measures 1 unit. Rotate point A around point B counter‑clockwise by an acute angle \\u03b8 to obtain point A\\u2032. Then rotate point B around A\\u2032 clockwise by the same angle \\u03b8 to obtain point B\\u2032. If AB\\u2032 = 2, find \\cos\\theta expressed as a reduced fraction m/n, and compute m+n.",
+    "answer": "5"
   },
   {
     "id": "AIME26-fill-022",
-    "benchmark": "AIME26",
-    "question": "In the plane, the segment AB measures 1 unit. Rotate point A around point B counter‑clockwise by an acute angle \\u03b8 to obtain point A\\u2032. Then rotate point B around A\\u2032 clockwise by the same angle \\u03b8 to obtain point B\\u2032. If AB\\u2032 = 2, find \\cos\\theta expressed as a reduced fraction m/n, and compute m+n.",
-    "answer": "5",
-    "target_difficulty": 0.14458507872669957,
-    "estimated_difficulty": 0.14712057589736944,
-    "source_id": "gen_r1_gen_r0_4_c0_c0",
-    "parent_source_id": "gen_r0_4_c0"
+    "question": "A blank fair six-sided die and five stickers labeled 1 through 5 are available. The die is rolled repeatedly. Each roll determines the face that lands up; the next sticker in order (starting with 1) is then placed on that face, covering any sticker that may already be there. After all five stickers have been placed, let p be the conditional probability that exactly one face of the die remains blank (i.e., no sticker ever placed on it), given that stickers 1 and 3 are visible (i.e., they have not been covered by later stickers). If p = m/n in lowest terms, find m + n.",
+    "answer": "13"
   },
   {
     "id": "AIME26-fill-023",
-    "benchmark": "AIME26",
-    "question": "A blank fair six-sided die and five stickers labeled 1 through 5 are available. The die is rolled repeatedly. Each roll determines the face that lands up; the next sticker in order (starting with 1) is then placed on that face, covering any sticker that may already be there. After all five stickers have been placed, let p be the conditional probability that exactly one face of the die remains blank (i.e., no sticker ever placed on it), given that stickers 1 and 3 are visible (i.e., they have not been covered by later stickers). If p = m/n in lowest terms, find m + n.",
-    "answer": "13",
-    "target_difficulty": 0.6183756957219307,
-    "estimated_difficulty": 0.6216148737599858,
-    "source_id": "gen_r2_gen_r1_gen_r0_8_c2_c1_c3",
-    "parent_source_id": "gen_r1_gen_r0_8_c2_c1"
-  },
-  {
-    "id": "AIME26-fill-024",
-    "benchmark": "AIME26",
     "question": "Let $\\triangle ABC$ have side lengths $AB = 13,\\ BC = 20,\\ CA = 21.$ Triangle $\\triangle A'B'C'$ is obtained by rotating $\\triangle ABC$ about its circumcenter so that $\\overline{AC}$ is perpendicular $\\overline{BC},$ with $A'$ and $B$ not on the same side of line $B'C'.$\nFind the integer closest to the area of hexagon $AA'CC'BB'$.",
-    "answer": "278",
-    "target_difficulty": 0.8407715412520115,
-    "estimated_difficulty": 0.8378225285480445,
-    "source_id": "gen_r0_9_c0",
-    "parent_source_id": "9"
+    "answer": "278"
   }
 ]

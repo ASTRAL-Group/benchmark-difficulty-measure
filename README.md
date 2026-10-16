@@ -28,7 +28,7 @@ This repository is the official implementation and artifact release of our NeurI
 |---|---|---|
 | **1. [Experimental Code](#1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
 | **2. [Difficulty Artifact](#2-difficulty-artifact)** | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
-| **3. [BenchFill Artifact](#3-benchfill-artifact)** | 106 curated BenchFill-generated items for AIME24, AIME25, AIME26 and AMC23 | [`data/filled_benchs/`](data/filled_benchs/) |
+| **3. [BenchFill Artifact](#3-benchfill-artifact)** | Augmented AIME24, AIME25, AIME26 and AMC23: original items plus 106 curated BenchFill-generated items | [`data/filled_benchs/`](data/filled_benchs/) |
 
 ## 1. Experimental Code
 
@@ -128,26 +128,19 @@ ScienceQA is the text-only evaluation used in the paper: image filenames are kep
 
 ## 3. BenchFill Artifact
 
-[`data/filled_benchs/`](data/filled_benchs/) contains **106 generated benchmark items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). These are generated questions, distinct from the original benchmark questions in the Difficulty Artifact. The collection includes all 12 Table 2 seed items for these four benchmarks and 94 subsequent mass-filling items.
+[`data/filled_benchs/`](data/filled_benchs/) contains four augmented evaluation benchmarks, ready to use as is. Each JSON array is the **original benchmark followed by our curated generated items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). The original items come first, in the `item_id` order of the Difficulty Artifact. The generated items follow in generation order, including all 12 Table 2 items for these four benchmarks.
 
-| Benchmark | Items | JSON array |
-|---|---:|---|
-| AIME24 | 21 | [`AIME24.json`](data/filled_benchs/AIME24.json) |
-| AIME25 | 22 | [`AIME25.json`](data/filled_benchs/AIME25.json) |
-| AIME26 | 23 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
-| AMC23 | 40 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
-| **Total** | **106** | |
+| Benchmark | Original | Generated | Total | JSON array |
+|---|---:|---:|---:|---|
+| AIME24 | 30 | 21 | 51 | [`AIME24.json`](data/filled_benchs/AIME24.json) |
+| AIME25 | 30 | 22 | 52 | [`AIME25.json`](data/filled_benchs/AIME25.json) |
+| AIME26 | 30 | 23 | 53 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
+| AMC23 | 40 | 40 | 80 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
+| **Total** | **130** | **106** | **236** | |
 
-Each object contains:
+Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, numbered consecutively from `001` in file order (for example `AIME26-fill-001`). Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#2-difficulty-artifact).
 
-- `id`, `benchmark`: generated-item ID and benchmark name. IDs use the format `<benchmark>-fill-<number>`, for example `AIME25-fill-004`. Original numeric suffixes and item order are preserved; gaps reflect curation.
-- `question`, `answer`: complete generated question and reference answer, stored as strings.
-- `target_difficulty`: the difficulty the search aimed to fill; `estimated_difficulty`: the selected item's recorded difficulty annotation.
-- `source_id`, `parent_source_id`, and optional `run_id`: preserved generation identifiers for tracing provenance. Source identifiers are local to their generation context; use `id` as the release key.
-
-**Difficulty scale.** Both difficulty fields use the benchmark-specific normalized **[0, 1]** scale of the gap-filling experiments, obtained by dividing the recorded Sheet values on the 0–10 scale by 10 without rounding. The separate Difficulty Artifact supplies original-item **raw IRT `b_mean`** values; normalize those per benchmark when comparing scales. No raw IRT parameters are reconstructed for generated items.
-
-This is the available curated mass-filling output, not a claim that every planned generation completed successfully. The 12 Table 2 seeds have documented human review; human review is not documented for the remaining 94 items.
+These are the curated generated items that are available; not every planned generation completed. The 12 Table 2 items have documented human review. Human review is not documented for the other 94.
 
 ## Citation
 
