@@ -1,405 +1,402 @@
 [
   {
+    "id": "AMC23-origin-000",
+    "question": "Cities $A$ and $B$ are $45$ miles apart. Alicia lives in $A$ and Beth lives in $B$. Alicia bikes towards $B$ at 18 miles per hour. Leaving at the same time, Beth bikes toward $A$ at 12 miles per hour. How many miles from City $A$ will they be when they meet?",
+    "answer": 27.0
+  },
+  {
+    "id": "AMC23-origin-001",
+    "question": "The weight of $\\frac{1}{3}$ of a large pizza together with $3 \\frac{1}{2}$ cups of orange slices is the same as the weight of $\\frac{3}{4}$ of a large pizza together with $\\frac{1}{2}$ cup of orange slices. A cup of orange slices weighs $\\frac{1}{4}$ of a pound. What is the weight, in pounds, of a large pizza? The answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m-n$?",
+    "answer": 4.0
+  },
+  {
+    "id": "AMC23-origin-002",
+    "question": "How many positive perfect squares less than $2023$ are divisible by $5$?",
+    "answer": 8.0
+  },
+  {
+    "id": "AMC23-origin-003",
+    "question": "How many digits are in the base-ten representation of $8^5 \\cdot 5^{10} \\cdot 15^5$?",
+    "answer": 18.0
+  },
+  {
+    "id": "AMC23-origin-004",
+    "question": "Janet rolls a standard $6$-sided die $4$ times and keeps a running total of the numbers she rolls. What is the probability that at some point, her running total will equal $3$? The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 265.0
+  },
+  {
+    "id": "AMC23-origin-005",
+    "question": "Points $A$ and $B$ lie on the graph of $y=\\log_{2}x$. The midpoint of $\\overline{AB}$ is $(6, 2)$. What is the positive difference between the $x$-coordinates of $A$ and $B$? The final answer can be written in the form $m \\sqrt{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 9.0
+  },
+  {
+    "id": "AMC23-origin-006",
+    "question": "A digital display shows the current date as an $8$-digit integer consisting of a $4$-digit year, followed by a $2$-digit month, followed by a $2$-digit date within the month. For example, Arbor Day this year is displayed as 20230428. For how many dates in $2023$ will each digit appear an even number of times in the 8-digital display for that date?",
+    "answer": 9.0
+  },
+  {
+    "id": "AMC23-origin-007",
+    "question": "Maureen is keeping track of the mean of her quiz scores this semester. If Maureen scores an $11$ on the next quiz, her mean will increase by $1$. If she scores an $11$ on each of the next three quizzes, her mean will increase by $2$. What is the mean of her quiz scores currently?",
+    "answer": 7.0
+  },
+  {
+    "id": "AMC23-origin-008",
+    "question": "Positive real numbers $x$ and $y$ satisfy $y^3=x^2$ and $(y-x)^2=4y^2$. What is $x+y$?",
+    "answer": 36.0
+  },
+  {
+    "id": "AMC23-origin-009",
+    "question": "What is the degree measure of the acute angle formed by lines with slopes $2$ and $\\frac{1}{3}$?",
+    "answer": 45.0
+  },
+  {
+    "id": "AMC23-origin-010",
+    "question": "What is the value of\n\\[2^3 - 1^3 + 4^3 - 3^3 + 6^3 - 5^3 + \\dots + 18^3 - 17^3?\\]",
+    "answer": 3159.0
+  },
+  {
+    "id": "AMC23-origin-011",
+    "question": "In a table tennis tournament every participant played every other participant exactly once. Although there were twice as many right-handed players as left-handed players, the number of games won by left-handed players was $40\\%$ more than the number of games won by right-handed players. (There were no ties and no ambidextrous players.) What is the total number of games played?",
+    "answer": 36.0
+  },
+  {
+    "id": "AMC23-origin-012",
+    "question": "How many complex numbers satisfy the equation $z^5=\\overline{z}$, where $\\overline{z}$ is the conjugate of the complex number $z$?",
+    "answer": 7.0
+  },
+  {
+    "id": "AMC23-origin-013",
+    "question": "Consider the set of complex numbers $z$ satisfying $|1+z+z^{2}|=4$. The maximum value of the imaginary part of $z$ can be written in the form $\\tfrac{\\sqrt{m}}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 21.0
+  },
+  {
+    "id": "AMC23-origin-014",
+    "question": "Flora the frog starts at 0 on the number line and makes a sequence of jumps to the right. In any one jump, independent of previous jumps, Flora leaps a positive integer distance $m$ with probability $\\frac{1}{2^m}$.\nWhat is the probability that Flora will eventually land at 10? Write the answer as a simplified fraction $\\frac{m}{n}$, find $m+n$",
+    "answer": 3.0
+  },
+  {
+    "id": "AMC23-origin-015",
+    "question": "What is the product of all solutions to the equation\n\\[\\log_{7x}2023\\cdot \\log_{289x}2023=\\log_{2023x}2023\\]",
+    "answer": 1.0
+  },
+  {
+    "id": "AMC23-origin-016",
+    "question": "Rows 1, 2, 3, 4, and 5 of a triangular array of integers are shown below.\n1\n1 1\n1 3 1\n1 5 5 1\n1 7 11 7 1\nEach row after the first row is formed by placing a 1 at each end of the row, and each interior entry is 1 greater than the sum of the two numbers diagonally above it in the previous row. What is the units digits of the sum of the 2023 numbers in the 2023rd row?",
+    "answer": 5.0
+  },
+  {
+    "id": "AMC23-origin-017",
+    "question": "If $A$ and $B$ are vertices of a polyhedron, define the distance $d(A,B)$ to be the minimum number of edges of the polyhedron one must traverse in order to connect $A$ and $B$. For example, if $\\overline{AB}$ is an edge of the polyhedron, then $d(A, B) = 1$, but if $\\overline{AC}$ and $\\overline{CB}$ are edges and $\\overline{AB}$ is not an edge, then $d(A, B) = 2$. Let $Q$, $R$, and $S$ be randomly chosen distinct vertices of a regular icosahedron (regular polyhedron made up of 20 equilateral triangles). Find the probability that $d(Q, R) > d(R, S)$. The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 29.0
+  },
+  {
+    "id": "AMC23-origin-018",
+    "question": "Let $f$ be the unique function defined on the positive integers such that \\[\\sum_{d\\mid n}d\\cdot f\\left(\\frac{n}{d}\\right)=1\\] for all positive integers $n$. What is $f(2023)$?",
+    "answer": 96.0
+  },
+  {
+    "id": "AMC23-origin-019",
+    "question": "How many ordered pairs of positive real numbers $(a,b)$ satisfy the equation\n\\[(1+2a)(2+2b)(2a+b) = 32ab?\\]",
+    "answer": 1.0
+  },
+  {
+    "id": "AMC23-origin-020",
+    "question": "Let $K$ be the number of sequences $A_1$, $A_2$, $\\dots$, $A_n$ such that $n$ is a positive integer less than or equal to $10$, each $A_i$ is a subset of $\\{1, 2, 3, \\dots, 10\\}$, and $A_{i-1}$ is a subset of $A_i$ for each $i$ between $2$ and $n$, inclusive. For example, $\\{\\}$, $\\{5, 7\\}$, $\\{2, 5, 7\\}$, $\\{2, 5, 7\\}$, $\\{2, 5, 6, 7, 9\\}$ is one such sequence, with $n = 5$.What is the remainder when $K$ is divided by $10$?",
+    "answer": 5.0
+  },
+  {
+    "id": "AMC23-origin-021",
+    "question": "There is a unique sequence of integers $a_1, a_2, \\cdots a_{2023}$ such that\n\\[\\tan2023x = \\frac{a_1 \\tan x + a_3 \\tan^3 x + a_5 \\tan^5 x + \\cdots + a_{2023} \\tan^{2023} x}{1 + a_2 \\tan^2 x + a_4 \\tan^4 x \\cdots + a_{2022} \\tan^{2022} x}\\]whenever $\\tan 2023x$ is defined. What is $a_{2023}?$",
+    "answer": -1.0
+  },
+  {
+    "id": "AMC23-origin-022",
+    "question": "Mrs. Jones is pouring orange juice into four identical glasses for her four sons. She fills the first three glasses completely but runs out of juice when the fourth glass is only $\\frac{1}{3}$ full. What fraction of a glass must Mrs. Jones pour from each of the first three glasses into the fourth glass so that all four glasses will have the same amount of juice? The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 7.0
+  },
+  {
+    "id": "AMC23-origin-023",
+    "question": "Carlos went to a sports store to buy running shoes. Running shoes were on sale, with prices reduced by $20\\%$ on every pair of shoes. Carlos also knew that he had to pay a $7.5\\%$ sales tax on the discounted price. He had $$43$ dollars. What is the original (before discount) price of the most expensive shoes he could afford to buy? ",
+    "answer": 50.0
+  },
+  {
+    "id": "AMC23-origin-024",
+    "question": "A $3-4-5$ right triangle is inscribed in circle $A$, and a $5-12-13$ right triangle is inscribed in circle $B$. Find the ratio of the area of circle $A$ to the area of circle $B$. The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 194.0
+  },
+  {
+    "id": "AMC23-origin-025",
+    "question": "Jackson's paintbrush makes a narrow strip with a width of $6.5$ millimeters. Jackson has enough paint to make a strip $25$ meters long. How many square centimeters of paper could Jackson cover with paint?",
+    "answer": 1625.0
+  },
+  {
+    "id": "AMC23-origin-026",
+    "question": "You are playing a game. A $2 \\times 1$ rectangle covers two adjacent squares (oriented either horizontally or vertically) of a $3 \\times 3$ grid of squares, but you are not told which two squares are covered. Your goal is to find at least one square that is covered by the rectangle. A \"turn\" consists of you guessing a square, after which you are told whether that square is covered by the hidden rectangle. What is the minimum number of turns you need to ensure that at least one of your guessed squares is covered by the rectangle?",
+    "answer": 4.0
+  },
+  {
+    "id": "AMC23-origin-027",
+    "question": "When the roots of the polynomial \n\\[P(x)  = (x-1)^1 (x-2)^2 (x-3)^3 \\cdot \\cdot \\cdot (x-10)^{10}\\]\nare removed from the number line, what remains is the union of $11$ disjoint open intervals. On how many of these intervals is $P(x)$ positive?",
+    "answer": 6.0
+  },
+  {
+    "id": "AMC23-origin-028",
+    "question": "For how many integers $n$ does the expression\\[\\sqrt{\\frac{\\log (n^2) - (\\log n)^2}{\\log n - 3}}\\]represent a real number, where log denotes the base $10$ logarithm?",
+    "answer": 901.0
+  },
+  {
+    "id": "AMC23-origin-029",
+    "question": "How many nonempty subsets $B$ of ${0, 1, 2, 3, \\cdots, 12}$ have the property that the number of elements in $B$ is equal to the least element of $B$? For example, $B = {4, 6, 8, 11}$ satisfies the condition.",
+    "answer": 144.0
+  },
+  {
+    "id": "AMC23-origin-030",
+    "question": "What is the area of the region in the coordinate plane defined by\n$| | x | - 1 | + | | y | - 1 | \\le 1$?",
+    "answer": 8.0
+  },
+  {
+    "id": "AMC23-origin-031",
+    "question": "In the $xy$-plane, a circle of radius $4$ with center on the positive $x$-axis is tangent to the $y$-axis at the origin, and a circle with radius $10$ with center on the positive $y$-axis is tangent to the $x$-axis at the origin. What is the slope of the line passing through the two points at which these circles intersect? The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 7.0
+  },
+  {
+    "id": "AMC23-origin-032",
+    "question": "Calculate the maximum area of an isosceles trapezoid that has legs of length $1$ and one base twice as long as the other. The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m^2+n^2$?",
+    "answer": 13.0
+  },
+  {
+    "id": "AMC23-origin-033",
+    "question": "For complex number $u = a+bi$ and $v = c+di$ (where $i=\\sqrt{-1}$), define the binary operation\n$u \\otimes v = ac + bdi$\nSuppose $z$ is a complex number such that $z\\otimes z = z^{2}+40$. What is $|z|^2$?",
+    "answer": 50.0
+  },
+  {
+    "id": "AMC23-origin-034",
+    "question": "A rectangular box $P$ has distinct edge lengths $a$, $b$, and $c$. The sum of the lengths of all $12$ edges of $P$ is $13$, the areas of all $6$ faces of $P$ is $\\frac{11}{2}$, and the volume of $P$ is $\\frac{1}{2}$. Find the length of the longest interior diagonal connecting two vertices of $P$. The final answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?",
+    "answer": 13.0
+  },
+  {
+    "id": "AMC23-origin-035",
+    "question": "For how many ordered pairs $(a,b)$ of integers does the polynomial $x^3+ax^2+bx+6$ have $3$ distinct integer roots?",
+    "answer": 5.0
+  },
+  {
+    "id": "AMC23-origin-036",
+    "question": "In the state of Coinland, coins have values $6,10,$ and $15$ cents. Suppose $x$ is the value in cents of the most expensive item in Coinland that cannot be purchased using these coins with exact change. What is the sum of the digits of $x?$",
+    "answer": 11.0
+  },
+  {
+    "id": "AMC23-origin-037",
+    "question": "Triangle $ABC$ has side lengths in arithmetic progression, and the smallest side has length $6.$ If the triangle has an angle of $120^\\circ,$ Find the area of $ABC$. The final answer can be simplified in the form $m \\sqrt{n}$, where $m$ and $n$ are positive integers and $n$ without square factore. What is $m+n$?",
+    "answer": 18.0
+  },
+  {
+    "id": "AMC23-origin-038",
+    "question": "When $n$ standard six-sided dice are rolled, the product of the numbers rolled can be any of $936$ possible values. What is $n$?",
+    "answer": 11.0
+  },
+  {
+    "id": "AMC23-origin-039",
+    "question": "Suppose that $a$, $b$, $c$ and $d$ are positive integers satisfying all of the following relations.\n\\[abcd=2^6\\cdot 3^9\\cdot 5^7\\]\n\\[\\text{lcm}(a,b)=2^3\\cdot 3^2\\cdot 5^3\\]\n\\[\\text{lcm}(a,c)=2^3\\cdot 3^3\\cdot 5^3\\]\n\\[\\text{lcm}(a,d)=2^3\\cdot 3^3\\cdot 5^3\\]\n\\[\\text{lcm}(b,c)=2^1\\cdot 3^3\\cdot 5^2\\]\n\\[\\text{lcm}(b,d)=2^2\\cdot 3^3\\cdot 5^2\\]\n\\[\\text{lcm}(c,d)=2^2\\cdot 3^3\\cdot 5^2\\]\nWhat is $\\text{gcd}(a,b,c,d)$?",
+    "answer": 3.0
+  },
+  {
     "id": "AMC23-fill-001",
-    "benchmark": "AMC23",
     "question": "A digital calendar records each date as an eight‑digit integer formed by concatenating the four‑digit year with the two‑digit month and two‑digit day. In the year 2025, for how many dates is this eight‑digit integer a multiple of both 9 and 11?",
-    "answer": "0",
-    "target_difficulty": 0.857,
-    "estimated_difficulty": 0.8622,
-    "source_id": "gen_r3_gen_r1_gen_r0_22_c3_c2_c3",
-    "parent_source_id": "q22",
-    "run_id": "split_20260712_103429"
+    "answer": "0"
   },
   {
     "id": "AMC23-fill-002",
-    "benchmark": "AMC23",
     "question": "For how many integer values of n does the expression sqrt((log(n^2) - (log n)^2)/(log n - 1)) represent a real number, where log denotes the base-10 logarithm?",
-    "answer": "91",
-    "target_difficulty": 0.598,
-    "estimated_difficulty": 0.5974,
-    "source_id": "gen_r2_gen_r0_47_c1_c1",
-    "parent_source_id": "q47",
-    "run_id": "split_20260625_004951"
+    "answer": "91"
   },
   {
     "id": "AMC23-fill-003",
-    "benchmark": "AMC23",
     "question": "A electronics store offers a 20% discount on a smartphone, and then an additional 10% discount on the already discounted price. Sales tax of 5% is applied after the discounts. If a shopper has $189, what is the original price of the most expensive smartphone they can afford?",
-    "answer": "250",
-    "target_difficulty": 0.162,
-    "estimated_difficulty": 0.1649,
-    "source_id": "gen_r0_36_c1",
-    "parent_source_id": "q36",
-    "run_id": "split_20260625_152650"
+    "answer": "250"
   },
   {
     "id": "AMC23-fill-004",
-    "benchmark": "AMC23",
     "question": "For how many ordered pairs (a,b) of positive integers does the cubic polynomial x^3 + a x^2 + b x + 48 have three distinct integer roots?",
-    "answer": "6",
-    "target_difficulty": 0.805602247098242,
-    "estimated_difficulty": 0.8029244525833917,
-    "source_id": "gen_r2_gen_r1_gen_r0_30_c0_c2_c1",
-    "parent_source_id": "gen_r1_gen_r0_30_c0_c2"
+    "answer": "6"
   },
   {
     "id": "AMC23-fill-005",
-    "benchmark": "AMC23",
     "question": "When n standard six-sided dice are rolled, the product of the numbers rolled that are multiples of 2 or 3 can be any of 145 possible values. What is n?",
-    "answer": "9",
-    "target_difficulty": 0.9139954022831848,
-    "estimated_difficulty": 0.9197734164804297,
-    "source_id": "gen_r0_40_c0",
-    "parent_source_id": "40"
+    "answer": "9"
   },
   {
     "id": "AMC23-fill-006",
-    "benchmark": "AMC23",
     "question": "Two friends start 12 miles apart and ride their bikes toward each other. One rides at 4 miles per hour and the other rides at 2 miles per hour. How many miles from the faster rider's starting point will they be when they meet?",
-    "answer": "8",
-    "target_difficulty": 0.03178480070682141,
-    "estimated_difficulty": 0.03259360091258214,
-    "source_id": "gen_r0_0_c0",
-    "parent_source_id": "0"
+    "answer": "8"
   },
   {
     "id": "AMC23-fill-007",
-    "benchmark": "AMC23",
     "question": "How many ordered pairs of positive real numbers $(a,b)$ satisfy the equation $(a+8)(b+1)(a+64b)=216ab$?",
-    "answer": "1",
-    "target_difficulty": 0.8325622262916959,
-    "estimated_difficulty": 0.8291682463036697,
-    "source_id": "gen_r1_gen_r0_15_c3_c0",
-    "parent_source_id": "gen_r0_15_c3"
+    "answer": "1"
   },
   {
     "id": "AMC23-fill-008",
-    "benchmark": "AMC23",
     "question": "A large pizza has an unknown weight $P$ pounds. One cup of grapes weighs $\\frac13$ pound. If $\\frac12$ of the pizza together with $2$ cups of grapes weighs the same as $\\frac34$ of the pizza together with $1$ cup of grapes, what is the weight, in pounds, of a large pizza? Express your answer as a reduced fraction $\\frac{m}{n}$, and then compute $m-n$.",
-    "answer": "1",
-    "target_difficulty": 0.1369903201934027,
-    "estimated_difficulty": 0.13742714000133514,
-    "source_id": "gen_r0_11_c3",
-    "parent_source_id": "11"
+    "answer": "1"
   },
   {
     "id": "AMC23-fill-009",
-    "benchmark": "AMC23",
     "question": "Find the area of the region in the coordinate plane defined by $| |x| - 5| + |y| \\le 2.5$.",
-    "answer": "25",
-    "target_difficulty": 0.6249860483730016,
-    "estimated_difficulty": 0.6264370674150613,
-    "source_id": "gen_r1_gen_r0_49_c0_c1",
-    "parent_source_id": "gen_r0_49_c0"
+    "answer": "25"
   },
   {
     "id": "AMC23-fill-010",
-    "benchmark": "AMC23",
     "question": "For how many integer values of $n$ does the expression \\[\\sqrt{\\frac{\\log (n^3) - (\\log n)^2}{\\log n - 4}}\\] represent a real number, where $\\log$ denotes the base‑10 logarithm?",
-    "answer": "9001",
-    "target_difficulty": 0.57001885310819675,
-    "estimated_difficulty": 0.56782132947965325,
-    "source_id": "gen_r1_gen_r0_47_c1_c1",
-    "parent_source_id": "gen_r0_47_c1"
+    "answer": "9001"
   },
   {
     "id": "AMC23-fill-011",
-    "benchmark": "AMC23",
     "question": "Consider all dates in the year 2030 written as eight‑digit numbers in the form YYYYMMDD. How many of those dates contain the digit 0 an even number of times in the whole eight‑digit representation?",
-    "answer": "156",
-    "target_difficulty": 0.7759644733899378,
-    "estimated_difficulty": 0.77335296728842,
-    "source_id": "gen_r4_gen_r0_22_c0_c3",
-    "parent_source_id": "gen_r0_22_c0"
+    "answer": "156"
   },
   {
     "id": "AMC23-fill-012",
-    "benchmark": "AMC23",
     "question": "The weight of \\(\\frac{4}{9}\\) of a large pizza together with 5 cups of grapes is the same as the weight of \\(\\frac{1}{3}\\) of a large pizza together with 7 cups of grapes. One cup of grapes weighs \\(\\frac{3}{8}\\) of a pound. What is the weight, in pounds, of a large pizza? Express your answer as a common fraction \\(\\frac{m}{n}\\) in lowest terms, where \\(m\\) and \\(n\\) are relatively prime positive integers, and find \\(m - n\\).",
-    "answer": "23",
-    "target_difficulty": 0.189922277343747,
-    "estimated_difficulty": 0.18756734635488337,
-    "source_id": "gen_r3_gen_r1_gen_r0_11_c1_c0_c0",
-    "parent_source_id": "gen_r1_gen_r0_11_c1_c0"
+    "answer": "23"
   },
   {
     "id": "AMC23-fill-013",
-    "benchmark": "AMC23",
     "question": "How many ordered pairs (a,b) of integers are there such that the polynomial x^4 + a x^3 + b x^2 + 12 x + 30 has four distinct integer roots?",
-    "answer": "0",
-    "target_difficulty": 0.9427821105233997,
-    "estimated_difficulty": 0.9408310180337892,
-    "source_id": "gen_r0_30_c2",
-    "parent_source_id": "30"
+    "answer": "0"
   },
   {
     "id": "AMC23-fill-014",
-    "benchmark": "AMC23",
     "question": "A hidden 2×1 domino covers two orthogonally adjacent squares on a 6×6 board. In each turn you may select any square and the board will tell you whether that square belongs to the domino. What is the smallest number of turns needed to guarantee that you have selected a square covered by the domino?",
-    "answer": "18",
-    "target_difficulty": 0.7010783720401637,
-    "estimated_difficulty": 0.6963804007443851,
-    "source_id": "gen_r2_gen_r0_45_c2_c1",
-    "parent_source_id": "gen_r0_45_c2"
+    "answer": "18"
   },
   {
     "id": "AMC23-fill-015",
-    "benchmark": "AMC23",
     "question": "Megan has taken a certain number of quizzes and tracks her average. If she scores a 92 on the next quiz, her average will increase by 2 points. If she scores a 92 on each of the next three quizzes, her average will increase by 5 points. What is her current average?",
-    "answer": "72",
-    "target_difficulty": 0.29481165615781513,
-    "estimated_difficulty": 0.29539002837109747,
-    "source_id": "gen_r0_23_c1",
-    "parent_source_id": "23"
+    "answer": "72"
   },
   {
     "id": "AMC23-fill-016",
-    "benchmark": "AMC23",
     "question": "When ten ordinary dice are rolled, the product of the results can be expressed as $2^a 3^b 5^c$ for nonnegative integers $a$, $b$, $c$. How many distinct triples $(a,b,c)$ are possible?",
-    "answer": "726",
-    "target_difficulty": 0.9828954022831848,
-    "estimated_difficulty": 0.9841544762056992,
-    "source_id": "gen_r1_gen_r0_40_c3_c2",
-    "parent_source_id": "gen_r0_40_c3"
+    "answer": "726"
   },
   {
     "id": "AMC23-fill-017",
-    "benchmark": "AMC23",
     "question": "When six standard five‑sided dice (faces 1–5) are rolled, the product of the numbers rolled can be any of 140 distinct values. Among these, how many are multiples of 8?",
-    "answer": "70",
-    "target_difficulty": 0.8456841231518348,
-    "estimated_difficulty": 0.8489195841288868,
-    "source_id": "gen_r4_gen_r3_gen_r2_gen_r1_gen_r0_40_c0_c0_c1_c1_c0",
-    "parent_source_id": "gen_r3_gen_r2_gen_r1_gen_r0_40_c0_c0_c1_c1"
+    "answer": "70"
   },
   {
     "id": "AMC23-fill-018",
-    "benchmark": "AMC23",
     "question": "A paintbrush makes a strip that is 1 cm wide. It can paint a strip that is 50 cm long. How many square centimeters of paper can be covered with paint?",
-    "answer": "50",
-    "target_difficulty": 0.01629680045629107,
-    "estimated_difficulty": 0.015505311219531243,
-    "source_id": "gen_r0_44_c0",
-    "parent_source_id": "44"
+    "answer": "50"
   },
   {
     "id": "AMC23-fill-019",
-    "benchmark": "AMC23",
     "question": "Town P and Town Q are 20 miles apart. Sam runs from Town P toward Town Q at 6 miles per hour. Lisa runs from Town Q toward Town P at 4 miles per hour. They start at the same time. How many miles from Town P will they be when they meet?",
-    "answer": "12",
-    "target_difficulty": 0.048081601163112475,
-    "estimated_difficulty": 0.048346118174562425,
-    "source_id": "gen_r0_0_c2",
-    "parent_source_id": "0"
+    "answer": "12"
   },
   {
     "id": "AMC23-fill-020",
-    "benchmark": "AMC23",
     "question": "For how many integer values of $n$ does the expression $\\sqrt{\\frac{\\log_{10}(n^7) - (\\log_{10} n)^2}{\\log_{10} n - 5}}$ represent a real number, where $\\log_{10}$ denotes the base‑10 logarithm?",
-    "answer": "9900001",
-    "target_difficulty": 0.5826106647398266,
-    "estimated_difficulty": 0.58640947717127165,
-    "source_id": "gen_r1_gen_r0_47_c0_c0",
-    "parent_source_id": "gen_r0_47_c0"
+    "answer": "9900001"
   },
   {
     "id": "AMC23-fill-021",
-    "benchmark": "AMC23",
     "question": "How many ordered pairs of positive real numbers (a,b) satisfy the equation (6 + a)(24 + b)(a + 2b) = 162 a b?",
-    "answer": "1",
-    "target_difficulty": 0.7881387099359058,
-    "estimated_difficulty": 0.786513564594893,
-    "source_id": "gen_r2_gen_r1_gen_r0_15_c2_c1_c1",
-    "parent_source_id": "gen_r1_gen_r0_15_c2_c1"
+    "answer": "1"
   },
   {
     "id": "AMC23-fill-022",
-    "benchmark": "AMC23",
     "question": "What is the area of the region in the coordinate plane defined by $| |x| - 4| + | |y| - 4| \\le 2$?",
-    "answer": "32",
-    "target_difficulty": 0.6119185337075306,
-    "estimated_difficulty": 0.6120170251442578,
-    "source_id": "gen_r0_49_c1",
-    "parent_source_id": "49"
+    "answer": "32"
   },
   {
     "id": "AMC23-fill-023",
-    "benchmark": "AMC23",
     "question": "Determine the number of ordered triples (a,b,c) of integers for which the polynomial $x^4 + a x^3 + b x^2 + c x + 32$ has four distinct integer roots.",
-    "answer": "8",
-    "target_difficulty": 0.9053800623603223,
-    "estimated_difficulty": 0.9059508416496687,
-    "source_id": "gen_r2_gen_r0_30_c2_c2",
-    "parent_source_id": "gen_r0_30_c2"
+    "answer": "8"
   },
   {
     "id": "AMC23-fill-024",
-    "benchmark": "AMC23",
     "question": "A digital display shows the current date as an 8‑digit integer in the format YYYYMMDD (for example, June 3, 2024 appears as 20240603). In the year 2024, for how many dates does the sum of the four digits of the year equal the sum of the six digits of the month and day, and also the product of the two digits of the month equal the product of the two digits of the day?",
-    "answer": "11",
-    "target_difficulty": 0.8765933541201074,
-    "estimated_difficulty": 0.8721474242626641,
-    "source_id": "gen_r1_gen_r0_22_c0_c1",
-    "parent_source_id": "gen_r0_22_c0"
+    "answer": "11"
   },
   {
     "id": "AMC23-fill-025",
-    "benchmark": "AMC23",
     "question": "A cup of orange slices weighs 1/5 pound. The combined weight of 1/2 of a large pizza and 2 cups of orange slices equals the combined weight of 3/4 of a large pizza and 1 cup of orange slices. What is the weight, in pounds, of a large pizza? Express your answer as a reduced fraction m/n.",
-    "answer": "4/5",
-    "target_difficulty": 0.12325389019407025,
-    "estimated_difficulty": 0.11889637337402432,
-    "source_id": "gen_r0_11_c2",
-    "parent_source_id": "11"
+    "answer": "4/5"
   },
   {
     "id": "AMC23-fill-026",
-    "benchmark": "AMC23",
     "question": "A bike shop sells a mountain bike at a 20% discount. The store also allows a $4 coupon to be applied to the discounted price before tax. If the sales tax is 5% on the price after the coupon, and you have $84 to spend, what is the highest original price you can afford?",
-    "answer": "105",
-    "target_difficulty": 0.15116357000066758,
-    "estimated_difficulty": 0.15120184834411745,
-    "source_id": "gen_r1_gen_r0_36_c3_c3",
-    "parent_source_id": "gen_r0_36_c3"
+    "answer": "105"
   },
   {
     "id": "AMC23-fill-027",
-    "benchmark": "AMC23",
     "question": "How many positive perfect squares less than 200 are divisible by 8?",
-    "answer": "3",
-    "target_difficulty": 0.2012559505211887,
-    "estimated_difficulty": 0.20111260028088043,
-    "source_id": "gen_r0_18_c2",
-    "parent_source_id": "18"
+    "answer": "3"
   },
   {
     "id": "AMC23-fill-028",
-    "benchmark": "AMC23",
     "question": "Liam wants to buy a watch. The store discounts watches by 20%. The discounted price is then subject to a 5% sales tax. After the tax is applied, a flat shipping fee of $16 is added. Liam has $100 to spend. What is the original price of the most expensive watch he can afford? Give your answer in dollars.",
-    "answer": "100",
-    "target_difficulty": 0.07725809693692944,
-    "estimated_difficulty": 0.08112052891566023,
-    "source_id": "gen_r1_gen_r0_36_c3_c1",
-    "parent_source_id": "gen_r0_36_c3"
+    "answer": "100"
   },
   {
     "id": "AMC23-fill-029",
-    "benchmark": "AMC23",
     "question": "Let $K$ be the number of sequences $A_1, A_2, \\dots, A_n$, where $n$ is a positive integer not exceeding $6$, each $A_i$ is a subset of \\{1,2,3,4,5,6\\}, and $A_{i-1}\\subseteq A_i$ for all $i \\ge 2$. What is the remainder when $K$ is divided by $8$?",
-    "answer": "3",
-    "target_difficulty": 0.5028509603046636,
-    "estimated_difficulty": 0.4987361065931624,
-    "source_id": "gen_r0_16_c2",
-    "parent_source_id": "16"
+    "answer": "3"
   },
   {
     "id": "AMC23-fill-030",
-    "benchmark": "AMC23",
     "question": "In the country of Zeta, coins have denominations of 6, 13, and 20 cents. Let x be the greatest amount in cents that cannot be paid exactly using these coins. What is the sum of the digits of x?",
-    "answer": "11",
-    "target_difficulty": 0.6660251882122644,
-    "estimated_difficulty": 0.668811221942221,
-    "source_id": "gen_r4_gen_r1_gen_r0_32_c2_c3_c1",
-    "parent_source_id": "gen_r1_gen_r0_32_c2_c3"
+    "answer": "11"
   },
   {
     "id": "AMC23-fill-031",
-    "benchmark": "AMC23",
     "question": "Consider the set of complex numbers $z$ satisfying $|z^2 + 1| = 4$. Find the maximum possible value of $\\operatorname{Im}(z)$. Express your answer as $\\frac{\\sqrt{m}}{n}$ with $m,n$ relatively prime positive integers, and compute $m+n$.",
-    "answer": "6",
-    "target_difficulty": 0.7095294325730935,
-    "estimated_difficulty": 0.7099848693455534,
-    "source_id": "gen_r0_7_c1",
-    "parent_source_id": "7"
+    "answer": "6"
   },
   {
     "id": "AMC23-fill-032",
-    "benchmark": "AMC23",
     "question": "When $n$ standard six-sided dice are rolled, the sum of the numbers on the dice that are perfect squares (i.e., the faces 1 or 4) can be any of 94 possible values. What is $n$?",
-    "answer": "24",
-    "target_difficulty": 0.8160463494435307,
-    "estimated_difficulty": 0.8160416514759897,
-    "source_id": "gen_r0_40_c1",
-    "parent_source_id": "40"
+    "answer": "24"
   },
   {
     "id": "AMC23-fill-033",
-    "benchmark": "AMC23",
     "question": "What is the area of the region in the coordinate plane defined by $| |x| - 5| + |y| \\le 4$?",
-    "answer": "64",
-    "target_difficulty": 0.6395045820805322,
-    "estimated_difficulty": 0.6407063871116555,
-    "source_id": "gen_r2_gen_r1_gen_r0_49_c3_c3_c0",
-    "parent_source_id": "gen_r1_gen_r0_49_c3_c3"
+    "answer": "64"
   },
   {
     "id": "AMC23-fill-034",
-    "benchmark": "AMC23",
     "question": "Find the area of the region in the coordinate plane defined by \\(| |x| - 1 | + | | y | - 1 | \\le \\frac{1}{2}\\).",
-    "answer": "2",
-    "target_difficulty": 0.5552295178480234,
-    "estimated_difficulty": 0.5565469558901651,
-    "source_id": "gen_r0_49_c1",
-    "parent_source_id": "49"
+    "answer": "2"
   },
   {
     "id": "AMC23-fill-035",
-    "benchmark": "AMC23",
     "question": "In 2030 a digital display shows each date as an eight‑digit integer formed by concatenating the year, month, and day (YYYYMMDD). How many dates in 2030 have the property that each digit 0‑9 occurs a perfect‑square number of times in this eight‑digit representation?",
-    "answer": "54",
-    "target_difficulty": 0.9533109113000794,
-    "estimated_difficulty": 0.9546451895897427,
-    "source_id": "gen_r7_gen_r3_gen_r2_gen_r0_22_c3_c2_c0_c3",
-    "parent_source_id": "gen_r3_gen_r2_gen_r0_22_c3_c2_c0"
+    "answer": "54"
   },
   {
     "id": "AMC23-fill-036",
-    "benchmark": "AMC23",
     "question": "Triangle ABC has side lengths in arithmetic progression. The sum of the lengths of the two longer sides is 48. The triangle has an angle of 120°. Find the area of triangle ABC. Express your answer in the form m√n, where m and n are positive integers and n is squarefree. What is m + n?",
-    "answer": "63",
-    "target_difficulty": 0.402275836050554,
-    "estimated_difficulty": 0.4005196593732203,
-    "source_id": "gen_r0_33_c2",
-    "parent_source_id": "33"
+    "answer": "63"
   },
   {
     "id": "AMC23-fill-037",
-    "benchmark": "AMC23",
     "question": "How many ordered pairs of positive real numbers (a,b) satisfy the equation (a+6)(b+6)(a+b+12) = 81 a b?",
-    "answer": "1",
-    "target_difficulty": 0.761178730742452,
-    "estimated_difficulty": 0.7601471858085878,
-    "source_id": "gen_r2_gen_r1_gen_r0_15_c1_c3_c0",
-    "parent_source_id": "gen_r1_gen_r0_15_c1_c3"
+    "answer": "1"
   },
   {
     "id": "AMC23-fill-038",
-    "benchmark": "AMC23",
     "question": "In a chess tournament each player plays each other exactly once. The number of right‑handed players is twice the number of left‑handed players, and the left‑handed players have won 50% more games than the right‑handed players. Assuming there are no draws, how many games were played in total?",
-    "answer": "15",
-    "target_difficulty": 0.44673457907260925,
-    "estimated_difficulty": 0.4423735048978687,
-    "source_id": "gen_r0_4_c2",
-    "parent_source_id": "4"
+    "answer": "15"
   },
   {
     "id": "AMC23-fill-039",
-    "benchmark": "AMC23",
     "question": "The weight of three‑sevenths of a pizza together with 5 cups of orange slices equals the weight of two‑fifths of a pizza together with 7 cups of orange slices. One cup of orange slices weighs two‑fifths of a pound. What is the weight, in pounds, of the whole pizza? Express the answer as a reduced fraction m/n and compute m - n.",
-    "answer": "27",
-    "target_difficulty": 0.1762336731774417,
-    "estimated_difficulty": 0.17851478157798206,
-    "source_id": "gen_r1_gen_r0_11_c1_c1",
-    "parent_source_id": "gen_r0_11_c1"
+    "answer": "27"
   },
   {
     "id": "AMC23-fill-040",
-    "benchmark": "AMC23",
     "question": "For how many ordered pairs (a,b) of integers does the polynomial $x^3 + a x^2 + b x - 12$ have three distinct integer roots?",
-    "answer": "10",
-    "target_difficulty": 0.8890491329561664,
-    "estimated_difficulty": 0.8855603081082693,
-    "source_id": "gen_r1_gen_r0_30_c1_c1",
-    "parent_source_id": "gen_r0_30_c1"
+    "answer": "10"
   }
 ]
