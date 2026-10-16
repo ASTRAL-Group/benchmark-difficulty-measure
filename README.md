@@ -28,7 +28,7 @@ This repository is the official implementation and artifact release of our NeurI
 |---|---|---|
 | **1. [Experimental Code](#1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
 | **2. [Difficulty Artifact](#2-difficulty-artifact-25-benchmarks)** (25 benchmarks) | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
-| **3. [BenchFill Artifact](#3-benchfill-artifact-4-benchmarks)** (4 benchmarks) | 106 curated BenchFill-generated items for AIME24, AIME25, AIME26 and AMC23 | [`data/mass_filling/`](data/mass_filling/) |
+| **3. [BenchFill Artifact](#3-benchfill-artifact-4-benchmarks)** (4 benchmarks) | 106 curated BenchFill-generated items for AIME24, AIME25, AIME26 and AMC23 | [`data/filled_benchs/`](data/filled_benchs/) |
 
 ## 1. Experimental Code
 
@@ -129,19 +129,19 @@ ScienceQA is the text-only evaluation used in the paper: image filenames are kep
 
 ## 3. BenchFill Artifact (4 Benchmarks)
 
-[`data/mass_filling/`](data/mass_filling/) contains **106 generated benchmark items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). These are generated questions, distinct from the original benchmark questions in the Difficulty Artifact. The collection includes all 12 Table 2 seed items for these four benchmarks and 94 subsequent mass-filling items.
+[`data/filled_benchs/`](data/filled_benchs/) contains **106 generated benchmark items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). These are generated questions, distinct from the original benchmark questions in the Difficulty Artifact. The collection includes all 12 Table 2 seed items for these four benchmarks and 94 subsequent mass-filling items.
 
 | Benchmark | Items | JSON array |
 |---|---:|---|
-| AIME24 | 21 | [`AIME24.json`](data/mass_filling/AIME24.json) |
-| AIME25 | 22 | [`AIME25.json`](data/mass_filling/AIME25.json) |
-| AIME26 | 23 | [`AIME26.json`](data/mass_filling/AIME26.json) |
-| AMC23 | 40 | [`AMC23.json`](data/mass_filling/AMC23.json) |
+| AIME24 | 21 | [`AIME24.json`](data/filled_benchs/AIME24.json) |
+| AIME25 | 22 | [`AIME25.json`](data/filled_benchs/AIME25.json) |
+| AIME26 | 23 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
+| AMC23 | 40 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
 | **Total** | **106** | |
 
 Each object contains:
 
-- `id`, `benchmark`: generated-item ID and benchmark name. IDs encode the origin: `AIME25-fill-table2-002` for a Table 2 seed or `AIME25-fill-mass-004` for a mass-filling item. Original numeric suffixes and item order are preserved; gaps reflect curation.
+- `id`, `benchmark`: generated-item ID and benchmark name. IDs use the format `<benchmark>-fill-<number>`, for example `AIME25-fill-004`. Original numeric suffixes and item order are preserved; gaps reflect curation.
 - `question`, `answer`: complete generated question and reference answer, stored as strings.
 - `target_difficulty`: the difficulty the search aimed to fill; `estimated_difficulty`: the selected item's recorded difficulty annotation.
 - `source_id`, `parent_source_id`, and optional `run_id`: preserved generation identifiers for tracing provenance. Source identifiers are local to their generation context; use `id` as the release key.

@@ -1,6 +1,6 @@
 [
   {
-    "id": "AIME25-fill-table2-001",
+    "id": "AIME25-fill-001",
     "benchmark": "AIME25",
     "question": "A circle has a diameter drawn, splitting it into two semicircular regions. Then 8 chords are drawn, each connecting a random point on the boundary in one semicircle to a random point on the boundary in the other semicircle. Assuming all points are chosen uniformly and independently, what is the expected number of regions into which the interior of the circle is divided?",
     "answer": "32",
@@ -11,7 +11,7 @@
     "run_id": "split_20260611_013104"
   },
   {
-    "id": "AIME25-fill-table2-002",
+    "id": "AIME25-fill-002",
     "benchmark": "AIME25",
     "question": "Alex divides a disk into four equal sectors by drawing two diameters that are perpendicular to each other. He then draws 12 line segments, each connecting a random point on the perimeter of one sector to a random point on the perimeter of the opposite sector (the sector directly across the centre). All points are chosen uniformly and independently. After drawing the two diameters and the 12 segments, what is the expected number of regions into which the disk is divided? Express your answer as a rational number in simplest form.",
     "answer": "179/2",
@@ -22,7 +22,7 @@
     "run_id": "split_20260618_124439"
   },
   {
-    "id": "AIME25-fill-table2-003",
+    "id": "AIME25-fill-003",
     "benchmark": "AIME25",
     "question": "Find the value of \\(\\displaystyle\\prod_{k=4}^{15} \\frac{\\log_k \\bigl(7^{k^{2}-1}\\bigr)}{\\log_{k+1} \\bigl(7^{k^{2}-4}\\bigr)}\\) expressed as a reduced fraction \\(\\frac{m}{n}\\). What is \\(m+n\\)?",
     "answer": "87",
@@ -33,7 +33,7 @@
     "run_id": "split_20260619_223309"
   },
   {
-    "id": "AIME25-fill-mass-004",
+    "id": "AIME25-fill-004",
     "benchmark": "AIME25",
     "question": "A circle has 20 distinct points chosen uniformly at random on its circumference. These points are randomly paired to form 10 chords, with no two chords sharing an endpoint. Assuming that no three chords intersect at the same interior point, what is the expected number of regions into which the interior of the circle is divided?",
     "answer": "26",
@@ -43,7 +43,7 @@
     "parent_source_id": "gen_r0_12_c3"
   },
   {
-    "id": "AIME25-fill-mass-005",
+    "id": "AIME25-fill-005",
     "benchmark": "AIME25",
     "question": "Let a_1 = \\frac{7}{2} and for n \\ge 1 define a_{n+1} = \\frac{a_n^2 + 5}{2 a_n}. If a_{12} = \\frac{p}{q} in lowest terms, where p and q are positive integers, find the remainder when p + q is divided by 1000.",
     "answer": "849",
@@ -53,7 +53,7 @@
     "parent_source_id": "gen_r1_gen_r0_27_c3_c1"
   },
   {
-    "id": "AIME25-fill-mass-007",
+    "id": "AIME25-fill-007",
     "benchmark": "AIME25",
     "question": "Find the number of ordered pairs (x, y) of integers with -100 ≤ x, y ≤ 100 such that x^2 - 5xy + 6y^2 = 0 and x > y.",
     "answer": "83",
@@ -63,7 +63,7 @@
     "parent_source_id": "gen_r0_3_c2"
   },
   {
-    "id": "AIME25-fill-mass-008",
+    "id": "AIME25-fill-008",
     "benchmark": "AIME25",
     "question": "Let A be the set of all positive divisors of 66. A subset B of A is chosen uniformly at random (the empty set may be chosen). Find the probability that B is nonempty and the least common multiple of the elements of B is 22. Express your answer as a reduced fraction m/n and provide m+n.",
     "answer": "133",
@@ -73,7 +73,7 @@
     "parent_source_id": "gen_r5_gen_r2_gen_r1_gen_r0_26_c3_c0_c0_c0"
   },
   {
-    "id": "AIME25-fill-mass-009",
+    "id": "AIME25-fill-009",
     "benchmark": "AIME25",
     "question": "Let $k$ be a real number such that the system \\[\\begin{cases} x^2 + y^2 = 7,\\\\ (x - k)^2 + (y - 2)^2 = (x - 5)^2 + (y - k)^2 \\end{cases}\\] has exactly one solution $(x,y)$ in the real numbers. The sum of all possible values of $k$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
     "answer": "8",
@@ -83,7 +83,7 @@
     "parent_source_id": "gen_r3_gen_r1_gen_r0_7_c0_c1_c3"
   },
   {
-    "id": "AIME25-fill-mass-010",
+    "id": "AIME25-fill-010",
     "benchmark": "AIME25",
     "question": "Alex draws three diameters that split a circular disk into six equal sectors. He then draws 40 additional line segments as follows: each segment is formed by choosing two points uniformly at random on the circumference, with the condition that the two points lie in opposite sectors (i.e., one point is in a sector and the other point is in the sector directly opposite it). Find the expected number of regions into which the 43 line segments (the three diameters and the 40 random segments) divide the disk.",
     "answer": "816",
@@ -93,7 +93,7 @@
     "parent_source_id": "gen_r0_12_c1"
   },
   {
-    "id": "AIME25-fill-mass-011",
+    "id": "AIME25-fill-011",
     "benchmark": "AIME25",
     "question": "Let $x_1 = \\frac{3}{2}$ and for $n\\ge 1$ define $x_{n+1}=\\frac{1}{2}\\Bigl(x_n+\\frac{2}{x_n}\\Bigr)$.  Write $x_{2025}$ as $\\frac{m}{n}$ in lowest terms.  Find the remainder when $m+n$ is divided by $1000$.",
     "answer": "945",
@@ -103,7 +103,7 @@
     "parent_source_id": "27"
   },
   {
-    "id": "AIME25-fill-mass-012",
+    "id": "AIME25-fill-012",
     "benchmark": "AIME25",
     "question": "Let f be the periodic function with period 4 such that for 0 ≤ t < 2, f(t)=2−t, and for 2 ≤ t < 4, f(t)=t−2, where t = x−4⌊x/4⌋ (the remainder of x upon division by 4). Extend f periodically, so f(x+4)=f(x) for all real x. The graph of y = f(x) is a triangle wave with amplitude 2.\n\nThe parabola x = 3y^2 meets the graph of y = f(x) at finitely many points. Find the sum of the y‑coordinates of all intersection points. Express the sum in the form (a+b√c)/d, where a, b, c, d are positive integers, gcd(a,b,d)=1, and c is square‑free. Compute a+b+c+d.",
     "answer": "93",
@@ -113,7 +113,7 @@
     "parent_source_id": "gen_r0_10_c0"
   },
   {
-    "id": "AIME25-fill-mass-013",
+    "id": "AIME25-fill-013",
     "benchmark": "AIME25",
     "question": "How many ordered pairs (x, y) of integers satisfy -13 ≤ x, y ≤ 13 and x^2 - 7xy + 12y^2 = 0?",
     "answer": "15",
@@ -123,7 +123,7 @@
     "parent_source_id": "gen_r1_gen_r0_3_c3_c3"
   },
   {
-    "id": "AIME25-fill-mass-015",
+    "id": "AIME25-fill-015",
     "benchmark": "AIME25",
     "question": "Let k be a real number such that the system\n    |z - 3| = 4,\n    |z - k| = |z - (5k - 2)|\nhas exactly one complex solution z. The sum of all possible values of k can be written as m/n, where m and n are relatively prime positive integers. Find m+n.",
     "answer": "11",
@@ -133,7 +133,7 @@
     "parent_source_id": "gen_r0_7_c2"
   },
   {
-    "id": "AIME25-fill-mass-016",
+    "id": "AIME25-fill-016",
     "benchmark": "AIME25",
     "question": "Let x_1 = 13/8 and for k ≥ 1 define x_{k+1} = 1 + 1/x_k. Suppose x_{2026} = m/n where m and n are relatively prime positive integers. Find the remainder when m + n is divided by 1000.",
     "answer": "453",
@@ -143,7 +143,7 @@
     "parent_source_id": "gen_r1_gen_r0_27_c3_c0"
   },
   {
-    "id": "AIME25-fill-mass-018",
+    "id": "AIME25-fill-018",
     "benchmark": "AIME25",
     "question": "Let $x_1=1$ and for $k\\ge1$ define $x_{k+1}=4+\\frac{1}{x_k}$. If $x_{2025}=\\frac{m}{n}$ where $m$ and $n$ are relatively prime positive integers, find the remainder when $m+n$ is divided by $1000$.",
     "answer": "786",
@@ -153,7 +153,7 @@
     "parent_source_id": "gen_r0_27_c3"
   },
   {
-    "id": "AIME25-fill-mass-019",
+    "id": "AIME25-fill-019",
     "benchmark": "AIME25",
     "question": "Two diameters are drawn in a circle, dividing the circle into four quadrants. Eight chords are drawn, each connecting two points chosen independently and uniformly at random on the circumference. Assuming that no three chords intersect at a single interior point (which occurs with probability 1), what is the expected number of regions into which the circle is divided? Express your answer as a reduced fraction.",
     "answer": "88/3",
@@ -163,7 +163,7 @@
     "parent_source_id": "gen_r1_gen_r0_12_c3_c2"
   },
   {
-    "id": "AIME25-fill-mass-021",
+    "id": "AIME25-fill-021",
     "benchmark": "AIME25",
     "question": "A disk is cut by two perpendicular diameters, dividing it into four quadrants. Then n chords are drawn, each connecting a uniformly random point on the upper semicircle to another uniformly random point on the upper semicircle (both endpoints lie on the same semicircle). All endpoints are chosen independently and uniformly. After drawing the diameters and all chords, the expected number of regions into which the disk is divided can be expressed in lowest terms as (n^2 + p n + q)/r. Find p+q+r.",
     "answer": "38",
@@ -173,7 +173,7 @@
     "parent_source_id": "gen_r2_gen_r1_gen_r0_12_c2_c0_c0"
   },
   {
-    "id": "AIME25-fill-mass-022",
+    "id": "AIME25-fill-022",
     "benchmark": "AIME25",
     "question": "Six points A, B, C, D, E, and F lie on a straight line in that order. A point G does not lie on the line. The distances AC = 70, BD = 25, CE = 35, DF = 40, AF = 120, CG = 13, and DG = 13 are known. Find the area of triangle BGE.",
     "answer": "300",
@@ -183,7 +183,7 @@
     "parent_source_id": "gen_r1_gen_r0_15_c1_c2"
   },
   {
-    "id": "AIME25-fill-mass-024",
+    "id": "AIME25-fill-024",
     "benchmark": "AIME25",
     "question": "Alex draws two perpendicular diameters that intersect at the centre of a circle, thereby partitioning it into four equal quadrants. He then randomly draws 40 chords inside the circle by picking a point uniformly at random on the perimeter in one quadrant and another point uniformly at random on the perimeter in the opposite quadrant (i.e. quadrants 180° apart), and joining these two points. All chords are drawn independently. Assuming that no three chords intersect at a single interior point, what is the expected number of regions into which the circle is divided after the two diameters and the 40 chords are drawn?",
     "answer": "709",
@@ -193,7 +193,7 @@
     "parent_source_id": "gen_r0_12_c0"
   },
   {
-    "id": "AIME25-fill-mass-025",
+    "id": "AIME25-fill-025",
     "benchmark": "AIME25",
     "question": "Let f be the periodic triangle wave defined by f(x) = x for -1 ≤ x < 1, f(x) = 2 - x for 1 ≤ x < 3, and f(x+4) = f(x) for all real x. The parabola x = 2 y^2 meets the graph of y = f(x) at finitely many points. The sum of the y‑coordinates of all intersection points can be written in the form (a + b√c)/d, where a, b, c, d are positive integers, gcd(a,b,d)=1, and c is square‑free. Find a + b + c + d.",
     "answer": "23",
@@ -203,7 +203,7 @@
     "parent_source_id": "10"
   },
   {
-    "id": "AIME25-fill-mass-026",
+    "id": "AIME25-fill-026",
     "benchmark": "AIME25",
     "question": "Find the value of the product from k = 5 to 24 of (log_k(5^{k^2-1}) / log_{k+1}(5^{k^2-4})). Write the result as a reduced fraction a/b and compute a+b.",
     "answer": "59",
@@ -213,7 +213,7 @@
     "parent_source_id": "gen_r0_18_c2"
   },
   {
-    "id": "AIME25-fill-mass-027",
+    "id": "AIME25-fill-027",
     "benchmark": "AIME25",
     "question": "Six members of a soccer team go to an ice‑cream shop. Each player orders a single scoop of chocolate, vanilla, or strawberry ice cream. At least one player orders each flavor, and the number of chocolate orders is more than the number of vanilla orders, which is more than the number of strawberry orders. In how many different ways can the six players place their orders?",
     "answer": "60",
