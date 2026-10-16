@@ -27,8 +27,8 @@ This repository is the official implementation and artifact release of our NeurI
 | Component | Contents | Location |
 |---|---|---|
 | **1. [Experimental Code](#1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
-| **2. [Difficulty Artifact](#2-difficulty-artifact-25-benchmarks)** (25 benchmarks) | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
-| **3. [BenchFill Artifact](#3-benchfill-artifact-4-benchmarks)** (4 benchmarks) | 106 curated BenchFill-generated items for AIME24, AIME25, AIME26 and AMC23 | [`data/filled_benchs/`](data/filled_benchs/) |
+| **2. [Difficulty Artifact](#2-difficulty-artifact)** | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
+| **3. [BenchFill Artifact](#3-benchfill-artifact)** | 106 curated BenchFill-generated items for AIME24, AIME25, AIME26 and AMC23 | [`data/filled_benchs/`](data/filled_benchs/) |
 
 ## 1. Experimental Code
 
@@ -75,7 +75,7 @@ bash random_baseline/scripts/run_budget_match.sh summary all
 
 The Bayesian IRT fitting of the original benchmarks (PyMC/NUTS) is not included.
 
-## 2. Difficulty Artifact (25 Benchmarks)
+## 2. Difficulty Artifact
 
 [`data/benchmarks/<benchmark>/`](data/benchmarks/) holds one directory per benchmark in Table 1 of the paper:
 
@@ -127,7 +127,7 @@ print(f"DDM {ddm:.3f}  Max Gap {gaps.max():.3f}")
 
 ScienceQA is the text-only evaluation used in the paper: image filenames are kept as metadata, but no images are included. GPQA-Diamond questions and answers are withheld under the dataset's access terms. The four agent benchmarks release task IDs only; GAIA's `source_item_id` values are positions in our response matrix, not official GAIA task IDs. Per-source versions, licenses and ID provenance are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-## 3. BenchFill Artifact (4 Benchmarks)
+## 3. BenchFill Artifact
 
 [`data/filled_benchs/`](data/filled_benchs/) contains **106 generated benchmark items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). These are generated questions, distinct from the original benchmark questions in the Difficulty Artifact. The collection includes all 12 Table 2 seed items for these four benchmarks and 94 subsequent mass-filling items.
 
