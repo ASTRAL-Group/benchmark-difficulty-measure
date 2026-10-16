@@ -1,6 +1,6 @@
 [
   {
-    "id": "AIME24-fill-table2-001",
+    "id": "AIME24-fill-001",
     "benchmark": "AIME24",
     "question": "Each vertex of a regular 20‑gon is colored either red or blue with equal probability. The probability that there exists a rotation of the polygon after which every blue vertex occupies a position originally colored red (and consequently every red vertex occupies a position originally colored blue) is \\frac{m}{n}, where m and n are relatively prime positive integers. What is m+n?",
     "answer": "32801",
@@ -11,7 +11,7 @@
     "run_id": "split_20260620_232642"
   },
   {
-    "id": "AIME24-fill-table2-002",
+    "id": "AIME24-fill-002",
     "benchmark": "AIME24",
     "question": "Bella walks a certain distance to a coffee shop. When she walks at a constant speed of 3 kilometers per hour, the walk takes her 100 minutes, including $t$ minutes spent in the coffee shop. When she walks at a constant speed of 5 kilometers per hour, the walk takes her 84 minutes, including the same $t$ minutes. Suppose Bella walks at 4 kilometers per hour. How many minutes does the walk take her, including the $t$ minutes in the coffee shop?",
     "answer": "90",
@@ -22,7 +22,7 @@
     "run_id": "split_20260621_185348"
   },
   {
-    "id": "AIME24-fill-table2-003",
+    "id": "AIME24-fill-003",
     "benchmark": "AIME24",
     "question": "Let N be the greatest four‑digit positive integer with the property that when any one of its digits is replaced by the digit 8, the resulting number is divisible by 11. Let Q and R be the quotient and remainder when N is divided by 1000. Find Q+R.",
     "answer": "896",
@@ -33,7 +33,7 @@
     "run_id": "split_20260621_210116"
   },
   {
-    "id": "AIME24-fill-mass-004",
+    "id": "AIME24-fill-004",
     "benchmark": "AIME24",
     "question": "Each vertex of a regular dodecagon is colored independently red, blue, or green with equal probability. Find the probability that there exists a nontrivial rotation of the dodecagon (by 1,2,...,11 vertices) such that after the rotation every red vertex moves to a position that was originally blue, every blue vertex moves to a position that was originally green, and every green vertex moves to a position that was originally red. Express this probability as a reduced fraction m/n where m and n are relatively prime positive integers, and determine m+n.",
     "answer": "6563",
@@ -43,7 +43,7 @@
     "parent_source_id": "gen_r0_62_c3"
   },
   {
-    "id": "AIME24-fill-mass-005",
+    "id": "AIME24-fill-005",
     "benchmark": "AIME24",
     "question": "Nine circles of radius 50 are sequentially tangent, and two of the circles are tangent to AB and BC of triangle ABC, respectively. 429 circles of radius 1 can be arranged in the same manner. The inradius of triangle ABC can be expressed as \\frac{m}{n}, where m and n are relatively prime positive integers. Find m+n.",
     "answer": "751",
@@ -53,7 +53,7 @@
     "parent_source_id": "73"
   },
   {
-    "id": "AIME24-fill-mass-006",
+    "id": "AIME24-fill-006",
     "benchmark": "AIME24",
     "question": "Alice picks a set A of positive integers. Bob writes down every nonempty finite subset B of the positive integers such that the maximum element of B belongs to A. If Bob writes down exactly 4 subsets in total, what is the sum of the elements of A?",
     "answer": "3",
@@ -63,7 +63,7 @@
     "parent_source_id": "gen_r0_86_c2"
   },
   {
-    "id": "AIME24-fill-mass-007",
+    "id": "AIME24-fill-007",
     "benchmark": "AIME24",
     "question": "A board consists of 3 rows and 6 columns. An unlimited supply of red, green, and blue stones is available. Stones are placed on some of the 18 unit squares, at most one per square, such that all stones placed in any given row have the same colour and all stones placed in any given column have the same colour. The placement is maximal: adding any stone to an empty square would cause a row or a column to contain two different colours. How many maximal placements are possible?",
     "answer": "4359",
@@ -73,7 +73,7 @@
     "parent_source_id": "gen_r3_gen_r2_gen_r1_gen_r0_89_c1_c3_c3_c1"
   },
   {
-    "id": "AIME24-fill-mass-008",
+    "id": "AIME24-fill-008",
     "benchmark": "AIME24",
     "question": "Mia selects 3 distinct numbers from the set {1,2,3,4,5,6,7,8}. The lottery then randomly draws 4 distinct numbers from the same set. She wins a prize if at least two of her numbers are among the drawn numbers, and she wins the grand prize if all three of her numbers are among the drawn numbers. What is the probability that she wins the grand prize given that she wins a prize? Express your answer as a reduced fraction m/n and then find m+n.",
     "answer": "8",
@@ -83,7 +83,7 @@
     "parent_source_id": "69"
   },
   {
-    "id": "AIME24-fill-mass-009",
+    "id": "AIME24-fill-009",
     "benchmark": "AIME24",
     "question": "In a town of 800 residents, every resident has a library card. Additionally, 330 residents own a pet, 220 own a car, and 180 own a bicycle. Exactly 190 residents own exactly two of these items, and exactly 150 own exactly three of these items. How many residents own all four items?",
     "answer": "80",
@@ -93,7 +93,7 @@
     "parent_source_id": "gen_r1_gen_r0_75_c1_c0"
   },
   {
-    "id": "AIME24-fill-mass-010",
+    "id": "AIME24-fill-010",
     "benchmark": "AIME24",
     "question": "Let $ABC$ be a triangle with $AB=25$, $BC=48$, and $CA=25$. Its circumcircle is $\\omega$. The tangents to $\\omega$ at $B$ and $C$ intersect at $D$, and the line $AD$ meets $\\omega$ again at $P$. If $AP$ can be expressed as $\\frac{m}{n}$ in lowest terms, find $m+n$.",
     "answer": "632",
@@ -103,7 +103,7 @@
     "parent_source_id": "gen_r1_gen_r0_61_c0_c0"
   },
   {
-    "id": "AIME24-fill-mass-011",
+    "id": "AIME24-fill-011",
     "benchmark": "AIME24",
     "question": "Jen chooses 3 distinct numbers from the set {1,2,3,4,5,6,7}. The lottery then draws 3 distinct numbers from the same set, all equally likely. She wins a prize if she matches at least two of the drawn numbers, and she wins the jackpot if she matches all three. What is the probability that she wins the jackpot given that she wins a prize? Express your answer as a reduced fraction m/n and then give m+n.",
     "answer": "14",
@@ -113,7 +113,7 @@
     "parent_source_id": "69"
   },
   {
-    "id": "AIME24-fill-mass-016",
+    "id": "AIME24-fill-016",
     "benchmark": "AIME24",
     "question": "Let $ABC$ be a triangle inscribed in a circle $\\omega$. The tangents to $\\omega$ at $B$ and $C$ intersect at point $D$, and $\\overline{AD}$ meets $\\omega$ again at $P$. Given $AB=7$, $BC=7$, and $AC=4$, the length $AP$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
     "answer": "65",
@@ -123,7 +123,7 @@
     "parent_source_id": "61"
   },
   {
-    "id": "AIME24-fill-mass-018",
+    "id": "AIME24-fill-018",
     "benchmark": "AIME24",
     "question": "Let $x$, $y$, and $z$ be positive real numbers satisfying \n\\[\\log_2\\left(\\frac{x}{yz}\\right)=\\frac13,\\quad \\log_2\\left(\\frac{y}{xz}\\right)=\\frac25,\\quad \\log_2\\left(\\frac{z}{xy}\\right)=\\frac37.\\]\nFind the value of \\(\\left|\\log_2\\big(x^5y^4z^3\\big)\\right|\\).  Express the answer as a reduced fraction \\(\\frac{m}{n}\\) and enter \\(m+n\\).",
     "answer": "598",
@@ -133,7 +133,7 @@
     "parent_source_id": "84"
   },
   {
-    "id": "AIME24-fill-mass-020",
+    "id": "AIME24-fill-020",
     "benchmark": "AIME24",
     "question": "Let b >= 2 be an integer. Call a positive integer n b‑magical if it has exactly two digits when written in base b (that is, n = a·b + c with 1 ≤ a ≤ b−1 and 0 ≤ c ≤ b−1) and the sum of its base‑b digits a + c divides n, with the quotient n/(a + c) being a perfect cube (the cube of an integer). Find the smallest base b for which there are more than ten b‑magical integers.",
     "answer": "15",
@@ -143,7 +143,7 @@
     "parent_source_id": "gen_r0_80_c2"
   },
   {
-    "id": "AIME24-fill-mass-021",
+    "id": "AIME24-fill-021",
     "benchmark": "AIME24",
     "question": "Let $x>1$ and $y>1$ be real numbers such that $\\log_x(y^x) = \\log_y(x^{2y}) = 6$. Find $xy$.",
     "answer": "018",
@@ -153,7 +153,7 @@
     "parent_source_id": "gen_r0_67_c2"
   },
   {
-    "id": "AIME24-fill-mass-022",
+    "id": "AIME24-fill-022",
     "benchmark": "AIME24",
     "question": "Jenna picks 5 distinct numbers from the set \\{1,2,3,\\dots,12\\}. A random draw selects 5 distinct numbers from the same set, all subsets equally likely. She wins a prize when at least three of her numbers are among the drawn numbers, and she wins the grand prize when all five of her numbers are drawn. What is \\(m+n\\) where the probability that she wins the grand prize given that she wins a prize is \\(\\frac{m}{n}\\) in lowest terms?",
     "answer": "247",
@@ -163,7 +163,7 @@
     "parent_source_id": "69"
   },
   {
-    "id": "AIME24-fill-mass-023",
+    "id": "AIME24-fill-023",
     "benchmark": "AIME24",
     "question": "Alice chooses a set A of positive integers. Bob then lists all finite nonempty sets B of positive integers with the property that the maximum element of B belongs to A. Bob’s list contains exactly 15 such sets. Find the sum of the elements of A. (Enter the answer as a three‑digit number, e.g., 010.)",
     "answer": "010",
@@ -173,7 +173,7 @@
     "parent_source_id": "86"
   },
   {
-    "id": "AIME24-fill-mass-024",
+    "id": "AIME24-fill-024",
     "benchmark": "AIME24",
     "question": "A cyclist rides a 2‑kilometer course at a constant speed of s kilometers per hour, then spends 15 minutes at a café. The total time for the ride and the café stop is 45 minutes. If she rides at s+4 km/h, the total time (including the café) is 30 minutes. What is the total time (ride + café) if she rides at s+1 km/h?",
     "answer": "39",
@@ -183,7 +183,7 @@
     "parent_source_id": "gen_r0_60_c2"
   },
   {
-    "id": "AIME24-fill-mass-025",
+    "id": "AIME24-fill-025",
     "benchmark": "AIME24",
     "question": "Each vertex of a regular hexagon is colored either red or blue independently with equal probability. After the coloring, the hexagon may be rotated by multiples of 60° or reflected across any line of symmetry of the hexagon. What is the probability that there exists a symmetry (rotation or reflection, including the identity) after which each blue vertex lies on a vertex originally colored red, and each red vertex lies on a vertex originally colored blue? Express your answer as a reduced fraction m/n, and output m+n.",
     "answer": "21",
@@ -193,7 +193,7 @@
     "parent_source_id": "gen_r1_gen_r0_62_c3_c0"
   },
   {
-    "id": "AIME24-fill-mass-026",
+    "id": "AIME24-fill-026",
     "benchmark": "AIME24",
     "question": "A list of six positive integers has total sum 52. Its unique mode is 14. The smallest integer in the list occurs exactly twice and is less than 4. Its median is a prime integer that does not appear in the list. Find the sum of the squares of all the numbers in the list.",
     "answer": "654",
@@ -203,7 +203,7 @@
     "parent_source_id": "gen_r0_82_c2"
   },
   {
-    "id": "AIME24-fill-mass-027",
+    "id": "AIME24-fill-027",
     "benchmark": "AIME24",
     "question": "Let ω be a primitive 29th root of unity with ω ≠ 1. Find the remainder when ∏_{k=0}^{28} (3 + ω^{k}) is divided by 1000.",
     "answer": "884",
