@@ -1,0 +1,235 @@
+[
+  {
+    "id": "AIME26-fill-table2-001",
+    "benchmark": "AIME26",
+    "question": "For integers $a$ and $b$, define $a\\diamond b$ to be $a-b$ when $a$ is odd and $b$ is even, and $a+b$ otherwise. Find the number of ordered sequences $a_1, a_2, \\dots, a_k$ of positive integers such that $a_1 + a_2 + \\cdots + a_k = 12$ and $a_1 \\diamond a_2 \\diamond \\cdots \\diamond a_k = 0$, where the operations are performed from left to right.",
+    "answer": "157",
+    "target_difficulty": 0.94,
+    "estimated_difficulty": 0.9408,
+    "source_id": "gen_r1_gen_r0_28_c3_c2",
+    "parent_source_id": "q28",
+    "run_id": "split_20260613_015116"
+  },
+  {
+    "id": "AIME26-fill-table2-002",
+    "benchmark": "AIME26",
+    "question": "Find the sum of the 9th terms of all integer arithmetic sequences that have first term 15 and include the numbers 75, 105, and 135 as terms.",
+    "answer": "696",
+    "target_difficulty": 0.1264,
+    "estimated_difficulty": 0.1277,
+    "source_id": "gen_r0_15_c0",
+    "parent_source_id": "q15",
+    "run_id": "split_20260616_015702"
+  },
+  {
+    "id": "AIME26-fill-table2-003",
+    "benchmark": "AIME26",
+    "question": "Let triangle ABC have side lengths AB = 7, BC = 9, and CA = 12. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter until side A'C' is perpendicular to BC, with A' and B on opposite sides of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
+    "answer": "74",
+    "target_difficulty": 0.8277,
+    "estimated_difficulty": 0.8248,
+    "source_id": "gen_r1_gen_r0_9_c0_c0",
+    "parent_source_id": "q9",
+    "run_id": "split_20260616_222422"
+  },
+  {
+    "id": "AIME26-fill-mass-004",
+    "benchmark": "AIME26",
+    "question": "For each positive integer n, let d be the greatest digit in the decimal representation of n and set b = d+1. Interpret the decimal string of n as a numeral in base b; the resulting integer is f(n). For instance, for n=35 we have d=5, b=6, and 35 interpreted in base 6 equals 3*6+5=23, so f(35)=23. Find the number of positive integers n less than 100 such that f(n)=n.",
+    "answer": "27",
+    "target_difficulty": 0.2676188214567127,
+    "estimated_difficulty": 0.2636875868821562,
+    "source_id": "gen_r0_18_c0",
+    "parent_source_id": "18"
+  },
+  {
+    "id": "AIME26-fill-mass-005",
+    "benchmark": "AIME26",
+    "question": "Let p be the smallest prime greater than 400. For each integer r with 0 ≤ r ≤ p-2 define S_r = sum_{k ≡ r (mod p-1)} binom{420}{k}, where binom{420}{k}=0 for k>420. How many of the numbers S_0, S_1, …, S_{p-2} are divisible by p?",
+    "answer": "379",
+    "target_difficulty": 0.5389702161099304,
+    "estimated_difficulty": 0.5442187222770324,
+    "source_id": "gen_r2_gen_r1_gen_r0_12_c1_c2_c3",
+    "parent_source_id": "gen_r1_gen_r0_12_c1_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-006",
+    "benchmark": "AIME26",
+    "question": "Let triangle ABC have side lengths AB = 6, BC = 5, and CA = 5. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter so that AC is perpendicular to BC, with A' and B not on the same side of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
+    "answer": "18",
+    "target_difficulty": 0.7409655963541633,
+    "estimated_difficulty": 0.7440036188899339,
+    "source_id": "gen_r0_9_c0",
+    "parent_source_id": "9"
+  },
+  {
+    "id": "AIME26-fill-mass-007",
+    "benchmark": "AIME26",
+    "question": "Let $N$ be the number of positive integer divisors of $6^5$ that leave a remainder of $2$ when divided by $5$. Find $N$.",
+    "answer": "9",
+    "target_difficulty": 0.09739608064015216,
+    "estimated_difficulty": 0.09337679748844369,
+    "source_id": "gen_r2_gen_r0_7_c2_c0",
+    "parent_source_id": "gen_r0_7_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-008",
+    "benchmark": "AIME26",
+    "question": "Consider a 6×6 grid of cells. For integers a and b with 2 ≤ a, b ≤ 6, an a × b cell loop is defined as the set of cells that form the perimeter of an a × b rectangle (the loop consists of 2a+2b−4 cells surrounding an (a−2)×(b−2) interior, which may be empty). Find the number of ways to partition the entire 6×6 grid into exactly three cell loops such that every cell of the grid belongs to exactly one loop.",
+    "answer": "9",
+    "target_difficulty": 0.9107234574297458,
+    "estimated_difficulty": 0.9096953051727839,
+    "source_id": "gen_r1_gen_r0_14_c3_c3",
+    "parent_source_id": "gen_r0_14_c3"
+  },
+  {
+    "id": "AIME26-fill-mass-009",
+    "benchmark": "AIME26",
+    "question": "For integers a and b, define a ★ b = a - b if a is odd, and a ★ b = a + b if a is even. Find the number of ordered sequences (a1, a2, …, an) of positive integers such that a1 + a2 + … + an = 13 and a1 ★ a2 ★ … ★ an = 1, where the binary operation is evaluated left to right.",
+    "answer": "555",
+    "target_difficulty": 0.9704,
+    "estimated_difficulty": 0.9722669763445937,
+    "source_id": "gen_r4_gen_r2_gen_r0_28_c1_c2_c2",
+    "parent_source_id": "gen_r2_gen_r0_28_c1_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-010",
+    "benchmark": "AIME26",
+    "question": "Find the sum of the 7th terms of all arithmetic sequences of integers that have first term equal to 12 and contain both 18 and 26 as terms.",
+    "answer": "42",
+    "target_difficulty": 0.1566856135334144,
+    "estimated_difficulty": 0.16147015745339912,
+    "source_id": "gen_r1_gen_r0_15_c3_c3",
+    "parent_source_id": "gen_r0_15_c3"
+  },
+  {
+    "id": "AIME26-fill-mass-011",
+    "benchmark": "AIME26",
+    "question": "Consider ordered 6‑tuples (a_1, a_2, a_3, a_4, a_5, a_6) where each a_k is taken from the set {1, 2, 3}. How many such 6‑tuples satisfy that the sum a_1 + a_2 + a_3 + a_4 + a_5 + a_6 is divisible by 3, and the cyclic sum a_1 a_2 + a_2 a_3 + a_3 a_4 + a_4 a_5 + a_5 a_6 + a_6 a_1 leaves a remainder of 2 when divided by 3?",
+    "answer": "72",
+    "target_difficulty": 0.852723457429746,
+    "estimated_difficulty": 0.8567430825040232,
+    "source_id": "gen_r3_gen_r2_gen_r0_29_c2_c2_c0",
+    "parent_source_id": "gen_r2_gen_r0_29_c2_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-013",
+    "benchmark": "AIME26",
+    "question": "For integers $a$ and $b$, define $a\\circ b = a - b$ if $a$ is odd and $b$ is even, and $a + b$ otherwise. Find the number of sequences $a_1, a_2, a_3, a_4$ of positive integers such that $a_1 + a_2 + a_3 + a_4 = 12$ and $a_1 \\circ a_2 \\circ a_3 \\circ a_4 = 0$.",
+    "answer": "12",
+    "target_difficulty": 0.6813024843710226,
+    "estimated_difficulty": 0.6845134468923083,
+    "source_id": "gen_r1_gen_r0_28_c2_c3",
+    "parent_source_id": "gen_r0_28_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-014",
+    "benchmark": "AIME26",
+    "question": "How many positive integer palindromes in base 10 have no digit 0, an even number of digits, consist only of odd digits, and whose digits sum to 14?",
+    "answer": "13",
+    "target_difficulty": 0.2894327776869095,
+    "estimated_difficulty": 0.28825269210144,
+    "source_id": "gen_r1_gen_r0_1_c2_c0",
+    "parent_source_id": "gen_r0_1_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-015",
+    "benchmark": "AIME26",
+    "question": "Let triangle ABC have side lengths AB = 9, BC = 7, and CA = 8. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter until segment A'C' is perpendicular to BC, with A' and B on opposite sides of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
+    "answer": "40",
+    "target_difficulty": 0.7997312605598234,
+    "estimated_difficulty": 0.8010245626490484,
+    "source_id": "gen_r3_gen_r1_gen_r0_9_c2_c1_c0",
+    "parent_source_id": "gen_r1_gen_r0_9_c2_c1"
+  },
+  {
+    "id": "AIME26-fill-mass-016",
+    "benchmark": "AIME26",
+    "question": "Consider all positive integer palindromes in base 10 that use only the digits 1 through 9 (no zero allowed). How many of these numbers have a digit sum equal to 6?",
+    "answer": "8",
+    "target_difficulty": 0.24187363065195946,
+    "estimated_difficulty": 0.24266523586422215,
+    "source_id": "gen_r2_gen_r1_gen_r0_1_c1_c2_c1",
+    "parent_source_id": "gen_r1_gen_r0_1_c1_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-017",
+    "benchmark": "AIME26",
+    "question": "Joanne has a blank fair four‑sided die (a tetrahedron) and four stickers each bearing a different integer from 1 to 4. She rolls the die and places the sticker labeled 1 on the face that lands on top. She then rolls the die again, places the sticker labeled 2 on the top face, and continues this process to place the remaining stickers in order. If a roll lands on a face that already has a sticker, the new sticker covers the old one. Let p be the conditional probability that at the end exactly one face of the die is left blank, given that the stickers labeled 1 and 2 are visible on faces of the die. Then p can be written as m/n, where m and n are relatively prime positive integers. Find m + n.",
+    "answer": "3",
+    "target_difficulty": 0.5246492258517629,
+    "estimated_difficulty": 0.5257921256132766,
+    "source_id": "gen_r1_gen_r0_8_c1_c2",
+    "parent_source_id": "gen_r0_8_c1"
+  },
+  {
+    "id": "AIME26-fill-mass-018",
+    "benchmark": "AIME26",
+    "question": "A fair six‑sided die is rolled repeatedly. Each time the die shows 1, 2, or 3, Alice receives a token; each time it shows 4, Bob receives a token; and each time it shows 5 or 6, Carol receives a token. The game stops the first time either Carol receives a token or both Alice and Bob have received at least one token. What is the probability that the game stops because both Alice and Bob have received at least one token before Carol receives any? Express the probability as a reduced fraction m/n, where m and n are relatively prime positive integers, and compute 100m + n.",
+    "answer": "415",
+    "target_difficulty": 0.35683525682076636,
+    "estimated_difficulty": 0.35590556223744265,
+    "source_id": "gen_r1_gen_r0_21_c2_c3",
+    "parent_source_id": "gen_r0_21_c2"
+  },
+  {
+    "id": "AIME26-fill-mass-019",
+    "benchmark": "AIME26",
+    "question": "Define an operation ⊙ on integers a and b by a ⊙ b = a - b if a is odd and b is even, and a ⊙ b = a + b otherwise. Find the number of ordered 5‑tuples (a_1,a_2,a_3,a_4,a_5) of positive integers such that a_1 + a_2 + a_3 + a_4 + a_5 = 12 and a_1 ⊙ a_2 ⊙ a_3 ⊙ a_4 ⊙ a_5 = 12, where the operations are performed from left to right.",
+    "answer": "170",
+    "target_difficulty": 0.7256361452393068,
+    "estimated_difficulty": 0.7261686331595369,
+    "source_id": "gen_r2_gen_r0_28_c3_c2",
+    "parent_source_id": "gen_r0_28_c3"
+  },
+  {
+    "id": "AIME26-fill-mass-020",
+    "benchmark": "AIME26",
+    "question": "A hiker leaves a campsite at a constant speed. Two hours later, a runner departs from the same campsite, running at a speed that is 2 miles per hour faster than the hiker. One hour after that, a cyclist leaves the campsite, riding at a speed that is 5 miles per hour faster than the hiker. All three arrive at the same mountain peak at the same time. The distance from the campsite to the peak is m/n miles, where m and n are relatively prime positive integers. Find m + n.",
+    "answer": "49",
+    "target_difficulty": 0.017684136960147978,
+    "estimated_difficulty": 0.018548199236152718,
+    "source_id": "gen_r1_gen_r0_0_c0_c1",
+    "parent_source_id": "gen_r0_0_c0"
+  },
+  {
+    "id": "AIME26-fill-mass-021",
+    "benchmark": "AIME26",
+    "question": "Find the sum of the 20th terms of all arithmetic sequences of integers that have first term equal to 5 and include both 29 and 41 as terms.",
+    "answer": "562",
+    "target_difficulty": 0.11053839874422184,
+    "estimated_difficulty": 0.11304765676815418,
+    "source_id": "gen_r0_15_c2",
+    "parent_source_id": "15"
+  },
+  {
+    "id": "AIME26-fill-mass-022",
+    "benchmark": "AIME26",
+    "question": "In the plane, the segment AB measures 1 unit. Rotate point A around point B counter‑clockwise by an acute angle \\u03b8 to obtain point A\\u2032. Then rotate point B around A\\u2032 clockwise by the same angle \\u03b8 to obtain point B\\u2032. If AB\\u2032 = 2, find \\cos\\theta expressed as a reduced fraction m/n, and compute m+n.",
+    "answer": "5",
+    "target_difficulty": 0.14458507872669957,
+    "estimated_difficulty": 0.14712057589736944,
+    "source_id": "gen_r1_gen_r0_4_c0_c0",
+    "parent_source_id": "gen_r0_4_c0"
+  },
+  {
+    "id": "AIME26-fill-mass-023",
+    "benchmark": "AIME26",
+    "question": "A blank fair six-sided die and five stickers labeled 1 through 5 are available. The die is rolled repeatedly. Each roll determines the face that lands up; the next sticker in order (starting with 1) is then placed on that face, covering any sticker that may already be there. After all five stickers have been placed, let p be the conditional probability that exactly one face of the die remains blank (i.e., no sticker ever placed on it), given that stickers 1 and 3 are visible (i.e., they have not been covered by later stickers). If p = m/n in lowest terms, find m + n.",
+    "answer": "13",
+    "target_difficulty": 0.6183756957219307,
+    "estimated_difficulty": 0.6216148737599858,
+    "source_id": "gen_r2_gen_r1_gen_r0_8_c2_c1_c3",
+    "parent_source_id": "gen_r1_gen_r0_8_c2_c1"
+  },
+  {
+    "id": "AIME26-fill-mass-024",
+    "benchmark": "AIME26",
+    "question": "Let $\\triangle ABC$ have side lengths $AB = 13,\\ BC = 20,\\ CA = 21.$ Triangle $\\triangle A'B'C'$ is obtained by rotating $\\triangle ABC$ about its circumcenter so that $\\overline{AC}$ is perpendicular $\\overline{BC},$ with $A'$ and $B$ not on the same side of line $B'C'.$\nFind the integer closest to the area of hexagon $AA'CC'BB'$.",
+    "answer": "278",
+    "target_difficulty": 0.8407715412520115,
+    "estimated_difficulty": 0.8378225285480445,
+    "source_id": "gen_r0_9_c0",
+    "parent_source_id": "9"
+  }
+]
