@@ -39,9 +39,8 @@ This repository is the official implementation and artifact release of our NeurI
 | [`scripts/check_paper_metrics.py`](scripts/check_paper_metrics.py) | DDM, Max Gap and Top-k gap sums; Top-3 gap-sum reduction and target deviation for inserted items |
 | [`run_experiment.sh`](run_experiment.sh) | Entry point for a BenchFill run |
 | [`irt_results/`](irt_results/), [`data/pools/`](data/pools/), [`data/matrix/`](data/matrix/) | Runtime inputs for the eight BenchFill benchmarks: IRT difficulties (`b_mean`, `b_sd`), item pools, and 12-model response matrices |
-| [`new_item_records.csv`](new_item_records.csv) | The 24 BenchFill items of Table 2 (8 benchmarks × 3 gaps) with target and annotated difficulty (0–10) |
 
-**Diagnostics.** For difficulties z<sub>(1)</sub> ≤ … ≤ z<sub>(n)</sub> in [0, 1], DDM is the 1-Wasserstein distance to a same-size uniform reference, (1/n) Σ |z<sub>(i)</sub> − (i − ½)/n|, and Max Gap is the largest spacing with z<sub>(0)</sub> = 0 and z<sub>(n+1)</sub> = 1 (Section 3.1 and App. C.4). An example on the Difficulty Artifact is given in [Section 2](#2-difficulty-artifact-25-benchmarks).
+**Diagnostics.** For difficulties z<sub>(1)</sub> ≤ … ≤ z<sub>(n)</sub> in [0, 1], DDM is the 1-Wasserstein distance to a same-size uniform reference, (1/n) Σ |z<sub>(i)</sub> − (i − ½)/n|, and Max Gap is the largest spacing with z<sub>(0)</sub> = 0 and z<sub>(n+1)</sub> = 1 (Section 3.1 and App. C.4).
 
 **Setup.** The scripts assume 8× NVIDIA RTX PRO 6000 Blackwell GPUs (~96 GB each). MiniMax-M2.7 serves as the rewriter; the 12 verifier models and their sampling settings are listed in [`verifier/run_rollout.sh`](verifier/run_rollout.sh). See [SETUP.md](SETUP.md) for environments and the bundled lmms-eval.
 
@@ -72,13 +71,11 @@ bash random_baseline/scripts/run_budget_match.sh verify-all
 bash random_baseline/scripts/run_budget_match.sh summary all
 ```
 
-The Bayesian IRT fitting of the original benchmarks (PyMC/NUTS) is not included.
-
 ## 2. Difficulty Artifact
 
 [`data/benchmarks/<benchmark>/`](data/benchmarks/) holds one directory per benchmark in Table 1 of the paper:
 
-- **`difficulty.csv`** — `item_id,b_mean`. `b_mean` is the original unnormalized IRT item difficulty, copied directly from the selected source estimates without refitting or rounding.
+- **`difficulty.csv`** — `item_id,b_mean`. `b_mean` is the unnormalized IRT item difficulty.
 - **`test.jsonl`** — the evaluated items with their original fields, or only `item_id` and `source_item_id` where questions are not redistributed.
 
 Both files use the same integer `item_id`, numbered `0` to `N−1`; join on it. Original identifiers are kept as provenance in the field listed below. Paper diagnostics use per-benchmark min–max normalization, `z = (b_mean - min(b_mean)) / (max(b_mean) - min(b_mean))`, as shown below.
@@ -124,11 +121,11 @@ print(f"DDM {ddm:.3f}  Max Gap {gaps.max():.3f}")
 | `ZebraLogic` | 1,000 | Questions | `id` |
 | `MedQA` | 1,273 | Questions | `source_item_id` (`qN`) |
 
-ScienceQA is the text-only evaluation used in the paper: image filenames are kept as metadata, but no images are included. GPQA-Diamond questions and answers are withheld under the dataset's access terms. The four agent benchmarks release task IDs only; GAIA's `source_item_id` values are positions in our response matrix, not official GAIA task IDs. Per-source versions, licenses and ID provenance are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The four agent benchmarks release task IDs only; GAIA's `source_item_id` values are positions in our response matrix, not official GAIA task IDs. Per-source versions, licenses and ID provenance are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## 3. BenchFill Artifact
 
-[`data/filled_benchs/`](data/filled_benchs/) contains four augmented evaluation benchmarks, ready to use as is. Each JSON array is the **original benchmark followed by our curated generated items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). The original items come first, in the `item_id` order of the Difficulty Artifact. The generated items follow in generation order, including all 12 Table 2 items for these four benchmarks.
+[`data/filled_benchs/`](data/filled_benchs/) contains four augmented evaluation benchmarks, ready to use as is. Each JSON array is the **original benchmark followed by our curated generated items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). The original items come first, in the `item_id` order of the Difficulty Artifact. The generated items follow in generation order.
 
 | Benchmark | Original | Generated | Total | JSON array |
 |---|---:|---:|---:|---|
@@ -136,11 +133,8 @@ ScienceQA is the text-only evaluation used in the paper: image filenames are kep
 | AIME25 | 30 | 22 | 52 | [`AIME25.json`](data/filled_benchs/AIME25.json) |
 | AIME26 | 30 | 23 | 53 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
 | AMC23 | 40 | 40 | 80 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
-| **Total** | **130** | **106** | **236** | |
 
 Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, numbered consecutively from `001` in file order (for example `AIME26-fill-001`). Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#2-difficulty-artifact).
-
-These are the curated generated items that are available; not every planned generation completed. The 12 Table 2 items have documented human review. Human review is not documented for the other 94.
 
 ## Citation
 
