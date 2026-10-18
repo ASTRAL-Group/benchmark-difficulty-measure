@@ -28,7 +28,7 @@ This repository is the official implementation and artifact release of our NeurI
 |---|---|---|
 | **1. [Experimental Code](#1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
 | **2. [Difficulty Artifact](#2-difficulty-artifact)** | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
-| **3. [BenchFill Artifact](#3-benchfill-artifact)** | Augmented AIME24, AIME25, AIME26 and AMC23: original items plus 106 curated BenchFill-generated items | [`data/filled_benchs/`](data/filled_benchs/) |
+| **3. [BenchFill Artifact](#3-benchfill-artifact)** | Augmented AIME24, AIME25, AIME26 and AMC23: original items plus 105 curated BenchFill-generated items | [`data/filled_benchs/`](data/filled_benchs/) |
 
 ## 1. Experimental Code
 
@@ -129,12 +129,13 @@ The four agent benchmarks release task IDs only; GAIA's `source_item_id` values 
 
 | Benchmark | Original | Generated | Total | JSON array |
 |---|---:|---:|---:|---|
-| AIME24 | 30 | 21 | 51 | [`AIME24.json`](data/filled_benchs/AIME24.json) |
+| AIME24 | 30 | 20 | 50 | [`AIME24.json`](data/filled_benchs/AIME24.json) |
 | AIME25 | 30 | 22 | 52 | [`AIME25.json`](data/filled_benchs/AIME25.json) |
 | AIME26 | 30 | 23 | 53 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
 | AMC23 | 40 | 40 | 80 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
+| **Total** | **130** | **105** | **235** | |
 
-Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, numbered consecutively from `001` in file order (for example `AIME26-fill-001`). Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#2-difficulty-artifact).
+Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, with stable published numeric suffixes (for example `AIME26-fill-001`). IDs are not renumbered after curation; the missing `AIME24-fill-005` is an intentional gap. Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#2-difficulty-artifact).
 
 ## Citation
 

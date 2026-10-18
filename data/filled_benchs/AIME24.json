@@ -151,7 +151,7 @@
   },
   {
     "id": "AIME24-fill-001",
-    "question": "Each vertex of a regular 20‑gon is colored either red or blue with equal probability. The probability that there exists a rotation of the polygon after which every blue vertex occupies a position originally colored red (and consequently every red vertex occupies a position originally colored blue) is \\frac{m}{n}, where m and n are relatively prime positive integers. What is m+n?",
+    "question": "Each vertex of a regular 20‑gon is independently colored either red or blue with equal probability. The probability that there exists a rotation of the polygon after which every blue vertex occupies a position originally colored red (and every red vertex occupies a position originally colored blue) is \\frac{m}{n}, where m and n are relatively prime positive integers. What is m+n?",
     "answer": "32801"
   },
   {
@@ -168,11 +168,6 @@
     "id": "AIME24-fill-004",
     "question": "Each vertex of a regular dodecagon is colored independently red, blue, or green with equal probability. Find the probability that there exists a nontrivial rotation of the dodecagon (by 1,2,...,11 vertices) such that after the rotation every red vertex moves to a position that was originally blue, every blue vertex moves to a position that was originally green, and every green vertex moves to a position that was originally red. Express this probability as a reduced fraction m/n where m and n are relatively prime positive integers, and determine m+n.",
     "answer": "6563"
-  },
-  {
-    "id": "AIME24-fill-005",
-    "question": "Nine circles of radius 50 are sequentially tangent, and two of the circles are tangent to AB and BC of triangle ABC, respectively. 429 circles of radius 1 can be arranged in the same manner. The inradius of triangle ABC can be expressed as \\frac{m}{n}, where m and n are relatively prime positive integers. Find m+n.",
-    "answer": "751"
   },
   {
     "id": "AIME24-fill-006",

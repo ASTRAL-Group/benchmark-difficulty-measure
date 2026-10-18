@@ -176,7 +176,7 @@
   },
   {
     "id": "AIME26-fill-006",
-    "question": "Let triangle ABC have side lengths AB = 6, BC = 5, and CA = 5. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter so that AC is perpendicular to BC, with A' and B not on the same side of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
+    "question": "Let triangle ABC have side lengths AB = 6, BC = 5, and CA = 5. Triangle A'B'C' is obtained by rotating triangle ABC about its circumcenter so that A'C' is perpendicular to BC, with A' and B not on the same side of line B'C'. Find the integer closest to the area of hexagon AA'CC'BB'.",
     "answer": "18"
   },
   {
@@ -206,7 +206,7 @@
   },
   {
     "id": "AIME26-fill-012",
-    "question": "For integers $a$ and $b$, define $a\\circ b = a - b$ if $a$ is odd and $b$ is even, and $a + b$ otherwise. Find the number of sequences $a_1, a_2, a_3, a_4$ of positive integers such that $a_1 + a_2 + a_3 + a_4 = 12$ and $a_1 \\circ a_2 \\circ a_3 \\circ a_4 = 0$.",
+    "question": "For integers $a$ and $b$, define $a\\circ b = a - b$ if $a$ is odd and $b$ is even, and $a + b$ otherwise. Find the number of sequences $a_1, a_2, a_3, a_4$ of positive integers such that $a_1 + a_2 + a_3 + a_4 = 12$ and $a_1 \\circ a_2 \\circ a_3 \\circ a_4 = 0$, where the operations are performed from left to right.",
     "answer": "12"
   },
   {
@@ -251,7 +251,7 @@
   },
   {
     "id": "AIME26-fill-021",
-    "question": "In the plane, the segment AB measures 1 unit. Rotate point A around point B counter‑clockwise by an acute angle \\u03b8 to obtain point A\\u2032. Then rotate point B around A\\u2032 clockwise by the same angle \\u03b8 to obtain point B\\u2032. If AB\\u2032 = 2, find \\cos\\theta expressed as a reduced fraction m/n, and compute m+n.",
+    "question": "In the plane, the segment AB measures 1 unit. Rotate point A around point B counter‑clockwise by an acute angle θ to obtain point A′. Then rotate point B around A′ clockwise by the same angle θ to obtain point B′. If AB′ = 2, find \\cos\\theta expressed as a reduced fraction m/n, and compute m+n.",
     "answer": "5"
   },
   {
@@ -261,7 +261,7 @@
   },
   {
     "id": "AIME26-fill-023",
-    "question": "Let $\\triangle ABC$ have side lengths $AB = 13,\\ BC = 20,\\ CA = 21.$ Triangle $\\triangle A'B'C'$ is obtained by rotating $\\triangle ABC$ about its circumcenter so that $\\overline{AC}$ is perpendicular $\\overline{BC},$ with $A'$ and $B$ not on the same side of line $B'C'.$\nFind the integer closest to the area of hexagon $AA'CC'BB'$.",
+    "question": "Let $\\triangle ABC$ have side lengths $AB = 13,\\ BC = 20,\\ CA = 21.$ Triangle $\\triangle A'B'C'$ is obtained by rotating $\\triangle ABC$ about its circumcenter so that $\\overline{A'C'}$ is perpendicular to $\\overline{BC},$ with $A'$ and $B$ not on the same side of line $B'C'.$\nFind the integer closest to the area of hexagon $AA'CC'BB'$.",
     "answer": "278"
   }
 ]

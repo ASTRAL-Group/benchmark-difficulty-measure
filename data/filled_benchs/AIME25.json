@@ -156,7 +156,7 @@
   },
   {
     "id": "AIME25-fill-002",
-    "question": "Alex divides a disk into four equal sectors by drawing two diameters that are perpendicular to each other. He then draws 12 line segments, each connecting a random point on the perimeter of one sector to a random point on the perimeter of the opposite sector (the sector directly across the centre). All points are chosen uniformly and independently. After drawing the two diameters and the 12 segments, what is the expected number of regions into which the disk is divided? Express your answer as a rational number in simplest form.",
+    "question": "Alex divides a disk into four equal sectors by drawing two diameters that are perpendicular to each other. He then draws 12 line segments. For each segment, independently of the other segments, he chooses its first endpoint uniformly on the circumference of the disk, then chooses its second endpoint uniformly on the quarter-circle arc in the opposite sector. After drawing the two diameters and the 12 segments, what is the expected number of regions into which the disk is divided? Express your answer as a rational number in simplest form.",
     "answer": "179/2"
   },
   {

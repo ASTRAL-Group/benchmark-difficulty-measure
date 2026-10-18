@@ -316,7 +316,7 @@
   },
   {
     "id": "AMC23-fill-024",
-    "question": "A digital display shows the current date as an 8‑digit integer in the format YYYYMMDD (for example, June 3, 2024 appears as 20240603). In the year 2024, for how many dates does the sum of the four digits of the year equal the sum of the six digits of the month and day, and also the product of the two digits of the month equal the product of the two digits of the day?",
+    "question": "A digital display shows the current date as an 8‑digit integer in the format YYYYMMDD (for example, June 3, 2024 appears as 20240603). In the year 2024, for how many dates does the sum of the four digits of the year equal the sum of the four digits of the month and day, and also the product of the two digits of the month equal the product of the two digits of the day?",
     "answer": "11"
   },
   {
