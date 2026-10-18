@@ -133,7 +133,6 @@ The four agent benchmarks release task IDs only; GAIA's `source_item_id` values 
 | AIME25 | 30 | 22 | 52 | [`AIME25.json`](data/filled_benchs/AIME25.json) |
 | AIME26 | 30 | 23 | 53 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
 | AMC23 | 40 | 40 | 80 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
-| **Total** | **130** | **105** | **235** | |
 
 Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, with stable published numeric suffixes (for example `AIME26-fill-001`). IDs are not renumbered after curation; the missing `AIME24-fill-005` is an intentional gap. Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#2-difficulty-artifact).
 
