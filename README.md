@@ -38,7 +38,6 @@ This repository is the official implementation and artifact release of our NeurI
 | [`verifier/`](verifier/) | Difficulty annotation: 12-model rollouts and IRT scoring of new items against fixed model abilities |
 | [`scripts/check_paper_metrics.py`](scripts/check_paper_metrics.py) | DDM, Max Gap and Top-k gap sums; Top-3 gap-sum reduction and target deviation for inserted items |
 | [`run_experiment.sh`](run_experiment.sh) | Entry point for a BenchFill run |
-| [`irt_results/`](irt_results/), [`data/pools/`](data/pools/), [`data/matrix/`](data/matrix/) | Runtime inputs for the eight BenchFill benchmarks: IRT difficulties (`b_mean`, `b_sd`), item pools, and 12-model response matrices |
 
 **Diagnostics.** For difficulties z<sub>(1)</sub> ≤ … ≤ z<sub>(n)</sub> in [0, 1], DDM is the 1-Wasserstein distance to a same-size uniform reference, (1/n) Σ |z<sub>(i)</sub> − (i − ½)/n|, and Max Gap is the largest spacing with z<sub>(0)</sub> = 0 and z<sub>(n+1)</sub> = 1 (Section 3.1 and App. C.4).
 
@@ -60,7 +59,7 @@ bash run_experiment.sh run       # resume
 bash run_experiment.sh status
 ```
 
-Model abilities are fit locally from `data/matrix/` on first use (`verifier/fit_ability.py`). Outputs are written to `propose/results/`.
+Supply the runtime IRT calibration tables (`b_mean`, `b_sd`), item pools, and 12-model response matrices locally before running BenchFill. Model abilities are fit from the supplied matrices on first use (`verifier/fit_ability.py`). Outputs are written to `propose/results/`.
 
 **Run the baseline.**
 

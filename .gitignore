@@ -24,9 +24,10 @@ __pycache__/
 *.py[cod]
 .python-pycache/
 
-# IRT NetCDF (large) and model-ability posteriors (not released)
-irt_results/*.nc
-irt_results/*_ability.csv
+# Local experiment inputs
+/irt_results/
+/data/matrix/
+/data/pools/
 
 # Legacy
 propose/propose_runs/
