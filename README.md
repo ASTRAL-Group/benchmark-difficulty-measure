@@ -19,18 +19,18 @@
 </p>
 
 <p align="center">
-  <a href="https://naicheng-yu.github.io/Benchfill-Website/">Project Page</a>
+  <a href="https://naicheng-yu.github.io/Benchfill-Website/"><img src="https://naicheng-yu.github.io/Benchfill-Website/static/images/favicon-32.png" height="18" alt="" align="top"> Project Page</a>
 </p>
 
 This repository is the official implementation and artifact release of our NeurIPS 2026 paper, *Your Benchmark Is an Empirical Measure Over Difficulty*. The paper treats a benchmark as an empirical measure over item difficulty, diagnoses it with Difficulty Distribution Mismatch (DDM) and Maximum Gap, and proposes BenchFill, which writes new items into the largest difficulty gaps. The release has three components:
 
 | Component | Contents | Location |
 |---|---|---|
-| **1. [Experimental Code](#1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
-| **2. [Difficulty Artifact](#2-difficulty-artifact)** | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
-| **3. [BenchFill Artifact](#3-benchfill-artifact)** | Augmented AIME24, AIME25, AIME26 and AMC23: original items plus 105 curated BenchFill-generated items | [`data/filled_benchs/`](data/filled_benchs/) |
+| 🧪 **1. [Experimental Code](#-1-experimental-code)** | Difficulty diagnostics, the BenchFill algorithm and its baseline | [`propose/`](propose/), [`verifier/`](verifier/), [`random_baseline/`](random_baseline/), [`scripts/`](scripts/) |
+| 📊 **2. [Difficulty Artifact](#-2-difficulty-artifact)** | Original unnormalized IRT item difficulties (`b_mean`), with original items where redistribution is permitted | [`data/benchmarks/`](data/benchmarks/) |
+| 🧩 **3. [BenchFill Artifact](#-3-benchfill-artifact)** | Augmented AIME24, AIME25, AIME26 and AMC23: original items plus 105 curated BenchFill-generated items | [`data/filled_benchs/`](data/filled_benchs/) |
 
-## 1. Experimental Code
+## 🧪 1. Experimental Code
 
 | Path | Contents |
 |---|---|
@@ -70,7 +70,7 @@ bash random_baseline/scripts/run_budget_match.sh verify-all
 bash random_baseline/scripts/run_budget_match.sh summary all
 ```
 
-## 2. Difficulty Artifact
+## 📊 2. Difficulty Artifact
 
 [`data/benchmarks/<benchmark>/`](data/benchmarks/) holds one directory per benchmark in Table 1 of the paper:
 
@@ -122,7 +122,7 @@ print(f"DDM {ddm:.3f}  Max Gap {gaps.max():.3f}")
 
 The four agent benchmarks release task IDs only; GAIA's `source_item_id` values are positions in our response matrix, not official GAIA task IDs. Per-source versions, licenses and ID provenance are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-## 3. BenchFill Artifact
+## 🧩 3. BenchFill Artifact
 
 [`data/filled_benchs/`](data/filled_benchs/) contains four augmented evaluation benchmarks, ready to use as is. Each JSON array is the **original benchmark followed by our curated generated items** from iterative gap filling with [`propose/mass_fill/`](propose/mass_fill/). The original items come first, in the `item_id` order of the Difficulty Artifact. The generated items follow in generation order.
 
@@ -133,9 +133,9 @@ The four agent benchmarks release task IDs only; GAIA's `source_item_id` values 
 | AIME26 | 30 | 23 | 53 | [`AIME26.json`](data/filled_benchs/AIME26.json) |
 | AMC23 | 40 | 40 | 80 | [`AMC23.json`](data/filled_benchs/AMC23.json) |
 
-Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, with stable published numeric suffixes (for example `AIME26-fill-001`). IDs are not renumbered after curation; the missing `AIME24-fill-005` is an intentional gap. Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#2-difficulty-artifact).
+Every record contains exactly three fields, in order: `id`, `question` and `answer`. Original items have IDs `<benchmark>-origin-<NNN>`, where `NNN` is the zero-based Difficulty Artifact `item_id` (for example `AIME26-origin-000`). Generated items have IDs `<benchmark>-fill-<NNN>`, with stable published numeric suffixes (for example `AIME26-fill-001`). IDs are not renumbered after curation; the missing `AIME24-fill-005` is an intentional gap. Original questions and answers are copied unchanged from the Difficulty Artifact (AMC23 answers keep their original numeric type). Original-item IRT difficulty estimates are in the [Difficulty Artifact](#-2-difficulty-artifact).
 
-## Citation
+## 📖 Citation
 
 ```bibtex
 @inproceedings{sun2026benchmark,
@@ -146,6 +146,6 @@ Every record contains exactly three fields, in order: `id`, `question` and `answ
 }
 ```
 
-## License and acknowledgments
+## ⚖️ License and acknowledgments
 
 Benchmark items in `data/` remain under the terms of their original sources; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for per-source licenses, attributions and the required MIT and Apache-2.0 notices. `vendor/lmms-eval.tar.gz` is a modified copy of [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), and `verifier/*/latex2sympy/` is a copy of latex2sympy2; both keep their own licenses.
