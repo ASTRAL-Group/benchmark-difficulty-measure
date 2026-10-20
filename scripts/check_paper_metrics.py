@@ -1,6 +1,7 @@
 """Recompute the paper's difficulty metrics from the released files.
 
-Table 1 (App. C.4 definitions), for every irt_results/<benchmark>_difficulty.csv:
+Table 1 (App. C.4 definitions), for the benchmarks listed below, using
+data/benchmarks/<benchmark>/difficulty.csv:
   - difficulties are b_mean, min-max normalized to [0, 1];
   - DDM is the mean |z_(i) - (i - 1/2)/n|, the 1-Wasserstein distance to a
     same-size empirical uniform reference;
@@ -11,7 +12,8 @@ Table 1 (App. C.4 definitions), for every irt_results/<benchmark>_difficulty.csv
 
 Table 2, BENCHFILL and Oracle columns, for the eight gap-filling benchmarks:
   - Top-3 Gap Sum Reduction (%) after inserting the three released items of
-    new_item_records.csv (BENCHFILL) or the three gap midpoints (Oracle);
+    new_item_records.csv (BENCHFILL), or sequentially inserting the midpoint
+    of the current largest gap three times (Oracle);
   - Target Dev. = mean |difficulty - target| / 10 over the three released items.
 
 Each value is printed next to the number published in the paper. The Baseline
@@ -30,21 +32,38 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# Map experiment keys to the public Difficulty Artifact directories.
+BENCHMARK_DIRS = {
+    "math-500": "MATH-500",
+    "minerva_math": "Minerva-Math",
+    "olympiadbench": "OlympiadBench",
+    "gaokao2023en": "Gaokao2023en",
+    "amc23": "AMC23",
+    "aime24": "AIME24",
+    "aime25": "AIME25",
+    "aime26": "AIME26",
+    "mmlu_bio": "MMLU-Pro-Biology",
+    "humaneval": "HumanEval",
+    "mbpp": "MBPP+",
+    "ifeval": "IFEval",
+    "bbh_3obj": "BBH-3 objects",
+}
+
 # Table 1 of the paper: (DDM, Max Gap, Top-5 Sum, #items).
 PAPER_TABLE1 = {
     "math-500": (0.164, 0.058, 0.175, 500),
     "minerva_math": (0.122, 0.031, 0.149, 272),
     "olympiadbench": (0.064, 0.048, 0.142, 675),
     "gaokao2023en": (0.088, 0.055, 0.183, 385),
-    "amc23": (0.088, 0.175, 0.528, 40),
+    "amc23": (0.089, 0.217, 0.539, 40),
     "aime24": (0.077, 0.179, 0.502, 30),
     "aime25": (0.079, 0.158, 0.492, 30),
     "aime26": (0.085, 0.119, 0.507, 30),
-    "mmlu_bio": (0.125, 0.043, 0.176, 717),
+    "mmlu_bio": (0.125, 0.045, 0.151, 717),
     "humaneval": (0.148, 0.165, 0.423, 164),
     "mbpp": (0.163, 0.049, 0.214, 378),
-    "ifeval": (0.159, 0.046, 0.190, 541),
-    "bbh_3obj": (0.090, 0.088, 0.354, 250),
+    "ifeval": (0.159, 0.046, 0.189, 541),
+    "bbh_3obj": (0.090, 0.075, 0.294, 250),
 }
 
 # Table 2 of the paper: (BENCHFILL reduction %, Oracle reduction %, BENCHFILL Target Dev.).
@@ -61,7 +80,7 @@ PAPER_TABLE2 = {
 
 
 def normalized_difficulties(benchmark: str) -> np.ndarray:
-    with (ROOT / "irt_results" / f"{benchmark}_difficulty.csv").open(encoding="utf-8") as f:
+    with (ROOT / "data" / "benchmarks" / BENCHMARK_DIRS[benchmark] / "difficulty.csv").open(encoding="utf-8") as f:
         b = np.array([float(row["b_mean"]) for row in csv.DictReader(f)])
     return (b - b.min()) / (b.max() - b.min())
 
@@ -79,10 +98,17 @@ def top_k_sum(z: np.ndarray, k: int) -> float:
     return float(np.sort(spacings(z))[-k:].sum())
 
 
-def top3_midpoints(z: np.ndarray) -> np.ndarray:
-    edges = np.concatenate([[0.0], np.sort(z), [1.0]])
-    idx = np.argsort(np.diff(edges))[-3:]
-    return (edges[idx] + edges[idx + 1]) / 2
+def oracle_midpoints(z: np.ndarray) -> np.ndarray:
+    """Insert three midpoints, reselecting the largest gap after each insertion."""
+    current = np.array(z, copy=True)
+    midpoints = []
+    for _ in range(3):
+        edges = np.concatenate([[0.0], np.sort(current), [1.0]])
+        idx = np.argmax(np.diff(edges))
+        midpoint = (edges[idx] + edges[idx + 1]) / 2
+        midpoints.append(midpoint)
+        current = np.append(current, midpoint)
+    return np.array(midpoints)
 
 
 def mark(got: float, paper: float, digits: int) -> str:
@@ -107,7 +133,7 @@ def main() -> None:
         target = np.array([float(r["target"]) for r in rows]) / 10
         before = top_k_sum(z, 3)
         fill = 100 * (before - top_k_sum(np.concatenate([z, new]), 3)) / before
-        oracle = 100 * (before - top_k_sum(np.concatenate([z, top3_midpoints(z)]), 3)) / before
+        oracle = 100 * (before - top_k_sum(np.concatenate([z, oracle_midpoints(z)]), 3)) / before
         dev = float(np.abs(new - target).mean())
         print(f"  {benchmark:14s} BENCHFILL {fill:6.2f}/{p_fill:<6.2f} {mark(fill, p_fill, 2):8s}"
               f" Oracle {oracle:6.2f}/{p_oracle:<6.2f} {mark(oracle, p_oracle, 2):8s}"
