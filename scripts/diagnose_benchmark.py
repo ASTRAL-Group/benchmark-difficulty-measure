@@ -47,7 +47,7 @@ def read_difficulties(path: Path, column: str = "b_mean") -> list[float]:
 
 
 def diagnose(values: Sequence[float], *, normalized: bool = False) -> dict:
-    """Return DDM, Maximum Gap, and its endpoints on the [0, 1] scale.
+    """Return DDM and Maximum Gap on the [0, 1] scale.
 
     Raw difficulties are min-max normalized within this benchmark. Pass
     normalized=True only for values already on the intended [0, 1] scale;
@@ -74,8 +74,6 @@ def diagnose(values: Sequence[float], *, normalized: bool = False) -> dict:
     n = len(z)
     ddm = math.fsum(abs(value - (i + 0.5) / n) for i, value in enumerate(z)) / n
     edges = [0.0, *z, 1.0]
-    # Break ties by returning the first widest interval from easy to hard.
-    gap_index = max(range(n + 1), key=lambda i: edges[i + 1] - edges[i])
     return {
         "items": n,
         "normalization": "already_normalized" if normalized else "per_benchmark_min_max",
@@ -83,8 +81,7 @@ def diagnose(values: Sequence[float], *, normalized: bool = False) -> dict:
         "input_max": upper,
         "ddm_reference": "same_size_uniform_midpoints",
         "ddm": ddm,
-        "max_gap": edges[gap_index + 1] - edges[gap_index],
-        "max_gap_interval": [edges[gap_index], edges[gap_index + 1]],
+        "max_gap": max(right - left for left, right in zip(edges, edges[1:])),
     }
 
 
@@ -113,8 +110,6 @@ def main() -> None:
         print(f"Normalization: {scale}")
         print(f"DDM: {result['ddm']:.6f}")
         print(f"Max Gap: {result['max_gap']:.6f}")
-        left, right = result["max_gap_interval"]
-        print(f"Largest gap endpoints: [{left:.6f}, {right:.6f}]")
 
 
 if __name__ == "__main__":
