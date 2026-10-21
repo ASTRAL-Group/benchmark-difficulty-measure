@@ -19,13 +19,18 @@
 </p>
 
 <p align="center">
-  <a href="https://naicheng-yu.github.io/Benchfill-Website/"><img src="https://naicheng-yu.github.io/Benchfill-Website/static/images/favicon-32.png" height="18" alt="" align="top"> Project Page</a>
+  <a href="https://naicheng-yu.github.io/Benchfill-Website/"><img src="https://naicheng-yu.github.io/Benchfill-Website/static/images/favicon-32.png" height="18" alt="" align="top"> Project Page</a> &nbsp; | &nbsp;
+  <a href="https://huggingface.co/datasets/Yifan99/BenchFill">🤗 Hugging Face Dataset</a>
 </p>
 
 This repository is the official implementation and artifact release of our NeurIPS 2026 paper, *Your Benchmark Is an Empirical Measure Over Difficulty*. We treat a benchmark as an empirical measure over item difficulty and formalize two problems in benchmark evaluation:
 
 - **Measure mismatch:** the benchmark's difficulty distribution differs from the intended evaluation distribution, which can distort model comparisons.
 - **Coverage gaps:** some difficulty intervals contain no benchmark items, so improvements within those intervals can go undetected.
+
+<p align="center">
+  <img src="https://naicheng-yu.github.io/Benchfill-Website/static/images/fig1_teaser.png" width="100%" alt="Figure 1: measure mismatch obscures model differences, while coverage gaps hide localized training improvements.">
+</p>
 
 We diagnose these problems with **Difficulty Distribution Mismatch (DDM)** and **Maximum Gap**, respectively, and introduce **BenchFill**, which generates new items to fill the largest difficulty gaps. The release has three components:
 
@@ -39,14 +44,15 @@ We diagnose these problems with **Difficulty Distribution Mismatch (DDM)** and *
 
 | Path | Contents |
 |---|---|
-| [`scripts/diagnose_benchmark.py`](scripts/diagnose_benchmark.py) | Diagnose any benchmark from its item difficulties: DDM, Max Gap and the largest uncovered interval |
+| [`scripts/diagnose_benchmark.py`](scripts/diagnose_benchmark.py) | Diagnose any benchmark from its item difficulties: DDM and Max Gap |
+| [`scripts/prepare_response_matrix.py`](scripts/prepare_response_matrix.py) | Aggregate graded model responses into a model-by-item count matrix for IRT |
 | [`propose/`](propose/) | BenchFill generation: rewriter, gap and parent selection, search driver |
 | [`verifier/`](verifier/) | Difficulty annotation: 12-model rollouts and IRT scoring of new items against fixed model abilities |
 | [`run_experiment.sh`](run_experiment.sh) | Initialize or resume BenchFill's generate–verify loop and inspect run status |
 
 ### Diagnose a benchmark
 
-Start with a CSV containing **one estimated difficulty per item**. For the 25 released benchmarks, use `data/benchmarks/<benchmark>/difficulty.csv`. For your own benchmark, first estimate item difficulties with IRT from model responses, then save them in a `b_mean` column. The command below reads those estimates and computes both diagnostics; it requires only Python 3.9+ and no GPUs or model setup.
+Start with a CSV containing **one estimated difficulty per item** in a `b_mean` column. For the 25 released benchmarks, use `data/benchmarks/<benchmark>/difficulty.csv`. For your own benchmark, [prepare a response matrix](#prepare-a-response-matrix), fit IRT, and save the item difficulties. The diagnostic script requires only Python 3.9+.
 
 Run from the repository root:
 
@@ -59,7 +65,6 @@ Items: 30
 Normalization: per-benchmark min-max to [0, 1]
 DDM: 0.077077
 Max Gap: 0.178623
-Largest gap endpoints: [0.783708, 0.962332]
 ```
 
 For your own difficulty file:
@@ -75,16 +80,45 @@ python3 scripts/diagnose_benchmark.py my_benchmark/difficulty.csv --column diffi
 python3 scripts/diagnose_benchmark.py my_benchmark/normalized.csv --column z --normalized
 ```
 
-**How to read the results.** DDM measures how far the difficulty distribution is from the uniform reference used in our paper; a larger value means a greater mismatch. Max Gap measures the widest difficulty interval with no items; a larger value means a wider region where localized improvements may be missed. In the AIME24 example, the largest uncovered interval spans about 17.9% of the normalized difficulty range. Its endpoints locate a region to target with new items.
+**How to read the results.** DDM measures how far the difficulty distribution is from the uniform reference used in our paper; a larger value means a greater mismatch. Max Gap measures the widest difficulty interval with no items; a larger value means a wider region where localized improvements may be missed. In the AIME24 example, the largest uncovered interval spans about 17.9% of the normalized difficulty range.
 
 **Calculation.** By default, the script normalizes each benchmark's IRT difficulties as `z = (b_mean - min(b_mean)) / (max(b_mean) - min(b_mean))`, then sorts them as z<sub>(1)</sub> ≤ … ≤ z<sub>(n)</sub>. Following the paper's reported diagnostics:
 
 - **DDM** is the 1-Wasserstein distance to a same-size empirical uniform reference at `(i − 0.5) / n`: `DDM = mean(|z_(i) − (i − 0.5) / n|)`.
 - **Max Gap** is `max(z_(i+1) − z_(i))`, including the boundary intervals defined by z<sub>(0)</sub> = 0 and z<sub>(n+1)</sub> = 1.
 
-Per-benchmark min–max normalization describes coverage within each benchmark's observed difficulty range. With `--normalized`, the supplied scale is used unchanged, including any gaps next to 0 and 1. The script rejects empty inputs, missing or nonfinite difficulties, and constant raw difficulties for which min–max normalization is undefined.
-
 To reproduce the paper's Table 1 and Table 2 comparisons, see [`scripts/check_paper_metrics.py`](scripts/check_paper_metrics.py).
+
+### Prepare a response matrix
+
+Collect and grade the same number of responses for every model–item pair. Save one response per row in `responses.csv`, with `correct` set to `1` or `0` and a unique `trial` ID within each pair. For example, two trials per pair:
+
+```csv
+model,item_id,trial,correct
+model-a,q0,0,1
+model-a,q0,1,0
+model-a,q1,0,1
+model-a,q1,1,1
+model-b,q0,0,0
+model-b,q0,1,0
+model-b,q1,0,1
+model-b,q1,1,0
+```
+
+```bash
+python3 scripts/prepare_response_matrix.py responses.csv --n-trials 2 \
+  --output my_benchmark/response_matrix.csv
+```
+
+The output has models as rows, items as columns, and **correct counts** as values:
+
+```csv
+model,q0,q1
+model-a,1,2
+model-b,0,1
+```
+
+Use this matrix and `n_trials` in your IRT fit to obtain `b_mean` per item. The script preserves IDs and their first-seen order and checks for missing or duplicate trials. For BenchFill, save the matrix to `data/matrix/<benchmark>_response_matrix.csv`; model names, item IDs, and trial counts must match your calibration. Its `q0`, `q1`, … IDs refer to positions in the evaluated item pool.
 
 ### Run BenchFill
 
@@ -97,7 +131,7 @@ cd vendor/lmms-eval && uv sync && cd ../..
 bash scripts/setup_diff_minimax.sh
 ```
 
-**Configure the run.** Set `BENCHMARK` at the top of `run_experiment.sh` (`aime24`, `aime25`, `aime26`, `amc23`, `gaokao2023en`, `bbh_3obj`, `mmlu_bio`, `ifeval`). By default it targets the three widest gaps with at most 8 rounds of 4 parents × 4 children. Set `N_SAMPLING` to match your IRT calibration (32 for math benchmarks; 4 for the supported lmms-eval tasks).
+**Configure the run.** Set `BENCHMARK` at the top of `run_experiment.sh` (`aime24`, `aime25`, `aime26`, `amc23`, `gaokao2023en`, `bbh_3obj`, `mmlu_bio`, `ifeval`). By default it targets the three widest gaps with at most 8 rounds of 4 parents × 4 children.
 
 ```bash
 conda activate diff
@@ -115,7 +149,7 @@ Supply the runtime IRT calibration tables (`b_mean`, `b_sd`), item pools, and 12
 - **`difficulty.csv`** — `item_id,b_mean`. `b_mean` is the unnormalized IRT item difficulty.
 - **`test.jsonl`** — the evaluated items with their original fields. For GPQA-Diamond, GAIA, CORE-Bench Hard, SWE-bench-Mini and USACO, this file contains only `item_id` and `source_item_id`; question and answer content is not included.
 
-Use `item_id` to match each difficulty estimate to its entry in `test.jsonl`. IDs run from `0` to `N−1` within each benchmark. The table below lists the original identifier retained for each source. To compute DDM and Max Gap from a `difficulty.csv`, follow [Diagnose a benchmark](#diagnose-a-benchmark).
+Use `item_id` to match each difficulty estimate to its entry in `test.jsonl`. IDs run from `0` to `N−1` within each benchmark. The table below lists the original identifier retained for each source.
 
 | Benchmark | Items | `test.jsonl` | Original identifier |
 |---|---:|---|---|
