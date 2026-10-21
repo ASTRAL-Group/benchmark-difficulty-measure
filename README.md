@@ -45,8 +45,9 @@ We diagnose these problems with **Difficulty Distribution Mismatch (DDM)** and *
 | Path | Contents |
 |---|---|
 | [`scripts/prepare_response_matrix.py`](scripts/prepare_response_matrix.py) | Aggregate graded model responses into a model-by-item count matrix for IRT |
+| [`scripts/fit_irt.py`](scripts/fit_irt.py) | Jointly estimate item difficulties and model abilities with Bayesian 1PL IRT |
 | [`scripts/diagnose_benchmark.py`](scripts/diagnose_benchmark.py) | Diagnose any benchmark from its item difficulties: DDM and Max Gap |
-| [`propose/`](propose/) | BenchFill generation: rewriter, gap and parent selection, search driver |
+| [`propose/`](propose/) | BenchFill generation: gap selection, parent selection, and iterative item rewriting |
 | [`verifier/`](verifier/) | Difficulty annotation: 12-model rollouts and IRT scoring of new items against fixed model abilities |
 | [`run_experiment.sh`](run_experiment.sh) | Initialize or resume BenchFill's generate–verify loop and inspect run status |
 
@@ -79,11 +80,35 @@ model-a,1,2
 model-b,0,1
 ```
 
-Use this matrix and `n_trials` in your IRT fit to obtain `b_mean` per item. The script preserves IDs and their first-seen order and checks for missing or duplicate trials. For BenchFill, save the matrix to `data/matrix/<benchmark>_response_matrix.csv`; model names, item IDs, and trial counts must match your calibration. Its `q0`, `q1`, … IDs refer to positions in the evaluated item pool.
+The script preserves IDs and their first-seen order and checks for missing or duplicate trials. For BenchFill, save the matrix to `data/matrix/<benchmark>_response_matrix.csv`; model names, item IDs, and trial counts must match your calibration. Its `q0`, `q1`, … IDs refer to positions in the evaluated item pool.
+
+### Fit IRT
+
+Use Python 3.12+ to fit **item difficulties and model abilities jointly** from the count matrix. Continuing the two-trial example above:
+
+```bash
+python3 -m venv .venv-irt
+source .venv-irt/bin/activate
+python -m pip install -r requirements_irt.txt
+
+python scripts/fit_irt.py my_benchmark/response_matrix.csv --n-trials 2 \
+  --output-dir my_benchmark
+python scripts/diagnose_benchmark.py my_benchmark/difficulty.csv
+```
+
+The fit follows [Appendix C.3](https://naicheng-yu.github.io/Benchfill-Website/static/pdf/benchfill_paper.pdf#page=23): `P(correct) = g + (1 − g) × sigmoid(theta − b)`, a binomial likelihood, and independent `Normal(0, 1)` priors on model abilities `theta` and item difficulties `b`. Defaults are 4 NUTS chains, 1,000 warmup steps and 1,000 posterior draws per chain, with `target_accept = 0.95`. Set `--n-trials` to the number of responses collected per model–item pair.
+
+Guessing defaults to `g = 0`. For four-choice questions, add `--guessing 0.25`. For varying choice counts, use `--guessing-csv guessing.csv` with columns `item_id,guessing` and one row per item.
+
+The output directory contains:
+
+- **`difficulty.csv`** — `item,b_mean,b_sd,r_hat,ess_bulk`; original matrix item IDs and unnormalized posterior difficulty estimates, ready for the diagnostic script.
+- **`ability.csv`** — `model,theta_mean,theta_sd,r_hat,ess_bulk`; posterior model ability estimates.
+- **`diagnostics.json`** — maximum R-hat, minimum bulk ESS, divergent transitions, sampling settings, and input identifiers. Check these before interpreting the estimates.
 
 ### Diagnose a benchmark
 
-Start with a CSV containing **one estimated difficulty per item** in a `b_mean` column. For the 25 released benchmarks, use `data/benchmarks/<benchmark>/difficulty.csv`. For your own benchmark, estimate item difficulties with IRT and save them in the same format. The diagnostic script requires only Python 3.9+.
+Start with a CSV containing **one estimated difficulty per item** in a `b_mean` column. Use the `difficulty.csv` produced above, or `data/benchmarks/<benchmark>/difficulty.csv` for the 25 released benchmarks. The diagnostic script requires only Python 3.9+.
 
 Run from the repository root:
 
