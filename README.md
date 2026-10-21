@@ -143,8 +143,6 @@ python3 scripts/diagnose_benchmark.py my_benchmark/normalized.csv --column z --n
 - **DDM** is the 1-Wasserstein distance to a same-size empirical uniform reference at `(i − 0.5) / n`: `DDM = mean(|z_(i) − (i − 0.5) / n|)`.
 - **Max Gap** is `max(z_(i+1) − z_(i))`, including the boundary intervals defined by z<sub>(0)</sub> = 0 and z<sub>(n+1)</sub> = 1.
 
-To reproduce the paper's Table 1 and Table 2 comparisons, see [`scripts/check_paper_metrics.py`](scripts/check_paper_metrics.py).
-
 ### Run BenchFill
 
 **Setup.** The BenchFill generation and verification scripts assume 8× NVIDIA RTX PRO 6000 Blackwell GPUs (~96 GB each). MiniMax-M2.7 serves as the rewriter; the 12 verifier models and their sampling settings are listed in [`verifier/run_rollout.sh`](verifier/run_rollout.sh). See [SETUP.md](SETUP.md) for environments and the bundled lmms-eval.
