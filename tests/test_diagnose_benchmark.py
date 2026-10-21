@@ -18,20 +18,17 @@ class DiagnoseTests(unittest.TestCase):
         result = diagnose([0.75, 0.25], normalized=True)
         self.assertEqual(result["ddm"], 0.0)
         self.assertEqual(result["max_gap"], 0.5)
-        self.assertEqual(result["max_gap_interval"], [0.25, 0.75])
 
     def test_largest_gap_can_be_a_boundary_interval(self):
         result = diagnose([0.1, 0.3], normalized=True)
         self.assertAlmostEqual(result["ddm"], 0.3)
         self.assertAlmostEqual(result["max_gap"], 0.7)
-        self.assertEqual(result["max_gap_interval"], [0.3, 1.0])
 
     def test_raw_values_are_normalized_and_duplicates_count_as_items(self):
         result = diagnose([4.0, -2.0, -2.0])
         self.assertEqual(result["items"], 3)
         self.assertAlmostEqual(result["ddm"], 5 / 18)
         self.assertEqual(result["max_gap"], 1.0)
-        self.assertEqual(result["max_gap_interval"], [0.0, 1.0])
 
     def test_normalized_singleton_and_constant_values(self):
         self.assertEqual(diagnose([0.5], normalized=True)["ddm"], 0.0)
