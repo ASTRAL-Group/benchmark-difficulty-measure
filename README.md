@@ -19,7 +19,8 @@
 </p>
 
 <p align="center">
-  <a href="https://naicheng-yu.github.io/Benchfill-Website/"><img src="https://naicheng-yu.github.io/Benchfill-Website/static/images/favicon-32.png" height="18" alt="" align="top"> Project Page</a> &nbsp; | &nbsp;
+  <a href="https://arxiv.org/abs/2610.29927">📄 arXiv</a> &nbsp; | &nbsp;
+  <a href="https://benchmark-difficulty-measure.github.io/"><img src="https://benchmark-difficulty-measure.github.io/static/images/favicon-32.png" height="18" alt="" align="top"> Project Page</a> &nbsp; | &nbsp;
   <a href="https://huggingface.co/datasets/Yifan99/BenchFill">🤗 Hugging Face Dataset</a>
 </p>
 
@@ -225,14 +226,18 @@ Original questions and answers are unchanged.
 ## 📖 Citation
 
 ```bibtex
-@inproceedings{sun2026benchmark,
-  title     = {Your Benchmark Is an Empirical Measure Over Difficulty},
-  author    = {Sun, Yifan and Yu, Naicheng and Gong, Jiawen and Shen, Jingyan and Zhang, Huan},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2026}
+@misc{sun2026benchmarkempiricalmeasuredifficulty,
+  title = {Your Benchmark Is an Empirical Measure Over Difficulty},
+  author = {Yifan Sun and Naicheng Yu and Jiawen Gong and Jingyan Shen and Huan Zhang},
+  year = {2026},
+  eprint = {2610.29927},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2610.29927}
 }
 ```
 
 ## ⚖️ License and acknowledgments
 
 Benchmark items in `data/` remain under the terms of their original sources; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for per-source licenses, attributions and the required MIT and Apache-2.0 notices. `vendor/lmms-eval.tar.gz` is a modified copy of [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), and `verifier/*/latex2sympy/` is a copy of latex2sympy2; both keep their own licenses.
+
